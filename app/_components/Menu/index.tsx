@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import cx from 'classnames';
 import styles from './index.module.css';
 
 export default function Menu() {
@@ -12,7 +13,7 @@ export default function Menu() {
 
   return (
     <div>
-      <nav>
+      <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           <li>
             <Link href="/news">ニュース</Link>
@@ -24,7 +25,7 @@ export default function Menu() {
             <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
-        <button>
+        <button className={cx(styles.button, styles.close)} onClick={close}>
           <Image
             src="/close.svg"
             alt="閉じる"
