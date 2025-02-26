@@ -7,12 +7,12 @@ import Footer from "@/app/_components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    template: "%s | mid design",
-    default: "mid design",
+    template: "%s | 株式会社 mid",
+    default: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣",
   },
   openGraph: {
-    title: "mid design",
-    description: "mid designは株式会社midが運営するWEB制作サービスです。",
+    title: "株式会社 mid",
+    description: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣",
     images: ["/ogp.png"],
   },
   alternates: {

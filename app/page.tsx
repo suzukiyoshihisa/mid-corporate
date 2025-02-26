@@ -14,10 +14,6 @@ export default async function Home() {
   return (
     <>
       <section className={styles.top}>
-        <div>
-          <h1 className={styles.title}>Online for all brands</h1>
-          <p className={styles.description}>すべてのブランドにオンラインの力を</p>
-        </div>
         <Image
           className={styles.bgimg}
           src="/img-mv.jpg"
