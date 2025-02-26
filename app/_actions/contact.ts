@@ -100,6 +100,6 @@ export async function createContactData(_prevState: unknown, formData: FormData)
       message: "お問い合わせに失敗しました",
     };
   }
-
+  
   return { status: "success", message: "OK" };
 }
