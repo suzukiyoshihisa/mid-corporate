@@ -2,14 +2,19 @@
   display: block;
   padding: 20px 40px;
   border-radius: var(--border-radius);
-  width: 300px;
+  width: 120px;
   background: url('/arrow-right.svg') no-repeat right 20px center,
     var(--color-button-primary);
   color: var(--color-text-unpainted);
+  text-align: center;
+  padding: 10px 20px;
+  background: #1b1d1f;
+  transition: 0.3s;
 }
 
 .button:hover {
   opacity: 0.9;
+  background: #0d6aa8;
 }
 
 @media (max-width: 640px) {

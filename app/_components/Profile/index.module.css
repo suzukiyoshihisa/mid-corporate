@@ -1,0 +1,28 @@
+.profile {
+  padding: 50px 36px;
+	background: url(/profile-img.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+  color: #ffffff;
+  line-height: 1.75;
+  width: 25%;
+  margin-top: -1px;
+}
+
+.title {
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+	text-align: left;
+}
+
+.name {
+  margin-top: 36px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.text {
+  margin-top: 18px;
+	font-size: 15px;
+	text-shadow: 1px 1px 1px #000; 
+}

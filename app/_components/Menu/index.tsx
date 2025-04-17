@@ -16,13 +16,19 @@ export default function Menu() {
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           <li>
-            <Link href="/news">ニュース</Link>
+            <Link href="">ABOUT US</Link>
           </li>
           <li>
-            <Link href="/members">メンバー</Link>
+            <Link href="">OUR SERVICE</Link>
           </li>
           <li>
-            <Link href="/contact">お問い合わせ</Link>
+            <Link href="">NEWS</Link>
+          </li>
+          <li>
+            <Link href="">ADDRESS</Link>
+          </li>
+          <li>
+            <Link href="/contact">CONTACT</Link>
           </li>
         </ul>
         <button className={cx(styles.button, styles.close)} onClick={close}>

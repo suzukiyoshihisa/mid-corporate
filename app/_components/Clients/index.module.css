@@ -1,0 +1,30 @@
+.contents {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  gap: 0px;
+}
+
+.image {
+  width: 100%;
+	background: url(/client-img.jpg) no-repeat;
+  background-size: cover;
+	background-position: center;
+}
+
+.text {
+  background: #1583d1;
+  padding: 72px;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.playfairTitle {
+  font-size: clamp(33.3px, 3.4722222222vw, 50px); 
+}
+
+.slides {
+  width: 100%;
+}

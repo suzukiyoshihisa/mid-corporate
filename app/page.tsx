@@ -2,8 +2,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { getNewsList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "./_constants";
+import About from "@/app/_components/About";
+import Service from "@/app/_components/Service";
 import NewsList from '@/app/_components/NewsList'
-import ButtonLink from "@/app/_components/ButtonLink";
+import Address from '@/app/_components/Address'
+import Clients from '@/app/_components/Clients'
 
 export const revalidate = 60;
 
@@ -24,12 +27,20 @@ export default async function Home() {
           sizes="(max-width: 640px) 100vw, 50vw"
         />
       </section>
+      <section className={styles.about}>
+        <About />
+      </section>
+      <section className={styles.service}>
+        <Service />
+      </section>
       <section className={styles.news}>
-        <h2 className={styles.newsTitle}>News</h2>
         <NewsList news={data.contents} />
-        <div className={styles.newsLink}>
-          <ButtonLink href="/news">もっとみる</ButtonLink>
-        </div>
+      </section>
+      <section className={styles.information}>
+        <Address />
+      </section>
+      <section className={styles.clients}>
+        <Clients />
       </section>
     </>
   );

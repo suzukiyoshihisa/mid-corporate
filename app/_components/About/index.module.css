@@ -1,0 +1,135 @@
+.inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.container {
+  padding: 10%;
+  background: #1583d1;
+}
+
+.title {
+  font-size: 75px;
+  color: #ffffff;
+  border-bottom: 0.5px solid #ffffff;
+}
+
+.text {
+  color: #ffffff;
+  margin-top: 36px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.snsContainer {
+  background: #1b1d1f;
+  padding: 54px 36px;
+}
+
+.snsTop {
+  padding-bottom: 36px;
+  border-bottom: 0.8px solid #ffffff;
+  text-align: center;
+}
+
+.image {
+  width: 50%;
+  height: 50%;
+}
+
+.circle {
+  width: 39px;
+  height: 39px;
+  margin-inline: auto;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  place-content: center;
+  transition: 0.3s;
+}
+
+.linkList {
+  display: flex
+}
+
+.linkItem {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  display: block;
+  margin-top: 18px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.75;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.snsBottom {
+  margin-top: 16px;
+}
+
+.playfairTitle {
+  padding: 36px 0;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (any-hover: hover) {
+  .circle:hover {
+    color: #1b1d1f;
+    background-color: #fff;
+  }
+
+  .snsBottom:hover {
+    color: #0cb4ce;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .linkList {
+    grid-template-columns: repeat(2, 1fr);
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  .about__sns-top-img {
+    max-width: 200px;
+  }
+
+  .about__img-container {
+    height: 120px;
+  }
+
+  .about__text {
+    text-align: center;
+  }
+
+  .sectionTitle {
+    font-size: 50px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 570px) {
+    .sectionTitle {
+      font-size: 35px;
+    }
+  }
+}

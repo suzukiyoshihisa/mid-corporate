@@ -1,0 +1,110 @@
+.serviceContents {
+  width: 100%;
+  background: #101213;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.serviceTextContainer {
+  background: url(/service-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.playfairTitle {
+  padding: 36px 0;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.serviceText {
+  margin-top: 36px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.item {
+  background: #ffffff;
+  padding: 100px 36px;
+}
+
+.title {
+  padding-bottom: 36px;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  border-bottom: 0.8px solid rgb(27, 29, 31);
+}
+
+.itemImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.itemHeading {
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: center;
+  font-weight: bold;
+}
+
+.itemText {
+  margin: 18px auto 36px;
+  color: rgb(119, 119, 119);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+/* 3つ目のアイテムだけスタイル変更 */
+.specialItem {
+  background: #1583d1;
+}
+
+.specialItem .title {
+  color: #ffffff;
+  border-bottom: 0.8px solid #ffffff;
+}
+
+.specialItem .itemHeading {
+  color: #ffffff;
+}
+
+.specialItem .itemText {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 960px) {
+  .serviceContents {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceItemArea {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceTextContainer {
+    height: 210px;
+    padding-left: 0;
+  }
+}

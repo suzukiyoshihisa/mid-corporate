@@ -5,6 +5,7 @@ import styles from './index.module.css';
 import Category from '../Category';
 import Date from '../Date';
 import { News } from '@/app/_libs/microcms';
+import ButtonLink from "@/app/_components/ButtonLink";
 
 type Props = {
   news: News[];
@@ -14,10 +15,15 @@ export default function NewsList({ news }: Props) {
   if (news.length === 0) {
     return <p>記事がありません。</p>;
   }
+
   return (
-    <ul>
+    <ul className={styles.list}>
+      <li className={`${styles.item} ${styles.news}`}>
+        <h2 className={styles.newsTitle}>News</h2>
+        <ButtonLink href="/news">ALL NEWS ON OUR BLOG</ButtonLink>
+      </li>
       {news.map((article) => (
-        <li key={article.id} className={styles.list}>
+        <li key={article.id} className={styles.item}>
           <Link href={`/news/${article.id}`} className={styles.link}>
             {article.thumbnail ? (
               <Image

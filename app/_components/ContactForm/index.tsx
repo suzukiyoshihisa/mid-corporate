@@ -28,6 +28,10 @@ export default function ContactForm() {
   }
   return (
     <form className={styles.form} action={formAction} onSubmit={handleSubmit}>
+      <h2 className={styles.sectionTitle}>Contact</h2>
+      <p className={styles.text}>
+      サービスや採用に関することなど、<br/>
+      下記フォームよりお気軽にお問い合わせください。</p>
       <div className={styles.horizontal}>
         <div className={styles.item}>
           <label className={styles.label} htmlFor="lastname">

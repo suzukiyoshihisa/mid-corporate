@@ -1,21 +1,46 @@
 .footer {
-  padding: 16px 24px;
-  text-align: center;
-  color: var(--color-text-sub);
-  font-size: 0.8rem;
-  margin-top: 80px;
-}
-
-.nav {
-  margin-bottom: 16px;
+  background-color: #1b1d1f;
+  color: #ffffff;
 }
 
 .items {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   font-size: 1rem;
   white-space: nowrap;
+  text-align: center;
+}
+
+.item {
+  width: 50%;
+}
+
+.infoContainer {
+  padding: 50px 0;
+  background: url(/company-info-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sectionTitle {
+  font-size: 50px;
+}
+
+.infoList {
+  margin-top: 36px;
+  padding-inline: 36px;
+}
+
+.infoItem {
+  margin-top: 18px;
+}
+
+.infoText {
+  margin-top: 6px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.75;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
@@ -23,6 +48,7 @@
     flex-wrap: wrap;
     gap: 8px 0;
   }
+
   .item {
     width: 50%;
   }
