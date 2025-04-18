@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.2.0-canary.76",
+    "@react-spring/web": "^9.7.5",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.10",
     "embla-carousel-autoplay": "^8.6.0",

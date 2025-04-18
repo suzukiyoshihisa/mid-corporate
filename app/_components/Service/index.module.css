@@ -1,8 +1,9 @@
-.serviceContents {
+.contents {
   width: 100%;
   background: #101213;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100%;
 }
 
 .serviceTextContainer {
@@ -15,7 +16,7 @@
 }
 
 .playfairTitle {
-  padding: 36px 0;
+  padding: 36px 10px;
   font-family: "Playfair Display", serif;
   color: #ffffff;
   font-size: 50px;
@@ -26,7 +27,7 @@
   line-height: 1.2;
 }
 
-.serviceText {
+.subTitle {
   margin-top: 36px;
   color: #ffffff;
   font-size: 15px;
@@ -36,6 +37,7 @@
 .item {
   background: #ffffff;
   padding: 100px 36px;
+  height: 100%;
 }
 
 .title {
@@ -45,6 +47,7 @@
   line-height: 1.2;
   text-align: center;
   border-bottom: 0.8px solid rgb(27, 29, 31);
+  height: 2em;
 }
 
 .itemImg {
@@ -55,7 +58,7 @@
 }
 
 .image {
-  width: 50%;
+  width: 60%;
   height: auto;
   text-align: center;
   align-items: center;
@@ -66,19 +69,27 @@
   line-height: 1.75;
   text-align: center;
   font-weight: bold;
+  height: 5em;
 }
 
 .itemText {
   margin: 18px auto 36px;
   color: rgb(119, 119, 119);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.75;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 3つ目のアイテムだけスタイル変更 */
 .specialItem {
   background: #1583d1;
+  color: #ffffff;
 }
 
 .specialItem .title {
@@ -86,12 +97,9 @@
   border-bottom: 0.8px solid #ffffff;
 }
 
-.specialItem .itemHeading {
-  color: #ffffff;
-}
-
 .specialItem .itemText {
   color: #ffffff;
+  font-size: 13px;
 }
 
 @media screen and (max-width: 960px) {
