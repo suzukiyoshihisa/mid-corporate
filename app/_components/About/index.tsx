@@ -9,13 +9,14 @@ export default function About() {
       <div className={`${styles.container} ${styles.animatedFadeIn} ${styles.delay0}`}>
         <h2 className={styles.title}>About Us.</h2>
         <p className={styles.text}>
-          株式会社mid（ミッド）はアパレル/ウェブ・グラフィック/人材派遣を運営
+          株式会社mid（ミッド）は、新宿に拠点を置くクリエイティブカンパニー。<br/>自社ブランド「WANSIE（ワンジー）」の企画・製造をはじめ、WEB制作やグラフィックデザイン、人材派遣など、領域を横断した事業を展開しています。
         </p>
         <p className={styles.text}>
-          個人や企業の魅力・事業の本質を見出し、長期的な視点で企業の価値を高めるサポートをしております。
+          私たちが大切にしているのは、表面的なトレンドに流されることなく、個人や企業が持つ本来の魅力や事業の本質に目を向けること。
+          長く愛される価値を築くために、丁寧に言葉を交わしながら、その核を形にしていきます。
         </p>
       </div>
-      <div className={`${styles.animatedFadeIn} ${styles.delay1}`}>
+      <div className={styles.animatedFadeIn}>
         <Image
           src="/about-img.jpg"
           alt="About Image"
@@ -25,7 +26,7 @@ export default function About() {
           priority={false}
         />
       </div>
-      <div className={`${styles.snsContainer} ${styles.animatedFadeIn} ${styles.delay2}`}>
+      <div className={styles.snsContainer}>
         <div className={styles.snsTop}>
           <div className={styles.snsTopImg}>
             <Image

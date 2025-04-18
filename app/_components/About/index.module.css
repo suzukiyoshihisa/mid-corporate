@@ -10,15 +10,22 @@
 }
 
 .title {
-  font-size: 75px;
+  padding: 36px 10px;
+  font-family: "Playfair Display", serif;
   color: #ffffff;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
   border-bottom: 0.5px solid #ffffff;
 }
 
 .text {
   color: #ffffff;
   margin-top: 36px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -31,7 +38,7 @@
 
 .snsContainer {
   background: #1b1d1f;
-  padding: 54px 36px;
+  padding: 54px 16px;
 }
 
 .snsTop {
@@ -56,7 +63,8 @@
 }
 
 .linkList {
-  display: flex
+  display: flex;
+  gap: 20px;
 }
 
 .linkItem {

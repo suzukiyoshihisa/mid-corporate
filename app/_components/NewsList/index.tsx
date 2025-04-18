@@ -19,7 +19,7 @@ export default function NewsList({ news }: Props) {
   return (
     <ul className={styles.list}>
       <li className={`${styles.item} ${styles.news}`}>
-        <h2 className={styles.newsTitle}>News</h2>
+        <h2 className={styles.playfairTitle}>News</h2>
         <ButtonLink href="/news">ALL NEWS ON OUR BLOG</ButtonLink>
       </li>
       {news.map((article) => (
