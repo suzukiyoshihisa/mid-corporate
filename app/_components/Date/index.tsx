@@ -9,7 +9,7 @@ type Props = {
 export default function Date({ date }: Props) {
   return (
     <span className={styles.date}>
-      <Image src="/clock.svg" alt="" width={16} height={16} loading="eager" />
+      <Image src="/clock.svg" alt="" width={10} height={10} loading="eager" />
       { formatDate(date) }
     </span>
   );

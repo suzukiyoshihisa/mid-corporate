@@ -1,7 +1,35 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import GridMotion from '@/app/_components/GridMotion';
 import styles from './index.module.css';
+  
+// note: you'll need to make sure the parent container of this component is sized properly
+const items = [
+  'mid-1',
+  'mid2',
+  'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-right.jpg',
+  'https://wansie.tokyo/shared/img/collections/2025-fw/img020.jpg',
+  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'Item 5',
+  <div key='jsx-item-2'>Custom JSX Content</div>,
+  'Item 7',
+  <div key='jsx-item-2'>Custom JSX Content</div>,
+  'https://wansie.tokyo/shared/img/shop-info/WANSIE_SHOP_ILLUST.webp',
+  'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jpg',
+  <div key='jsx-item-2'>
+    <Image
+      src="/about__sns-top.png"
+      alt="Custom Image"
+      className={styles.image}
+      width={154}
+      height={153}
+      priority={false}
+    />
+    <p className={styles.name}>WANSIE FLAGSHIP STORE </p>
+  </div>,
+  // Add more items as needed
+];
 
 export default function About() {
   return (
@@ -16,15 +44,8 @@ export default function About() {
           長く愛される価値を築くために、丁寧に言葉を交わしながら、その核を形にしていきます。
         </p>
       </div>
-      <div className={styles.animatedFadeIn}>
-        <Image
-          src="/about-img.jpg"
-          alt="About Image"
-          className={styles.card}
-          width={1920}
-          height={1270}
-          priority={false}
-        />
+      <div className={styles.gridContainer}>
+        <GridMotion items={items} />
       </div>
       <div className={styles.snsContainer}>
         <div className={styles.snsTop}>

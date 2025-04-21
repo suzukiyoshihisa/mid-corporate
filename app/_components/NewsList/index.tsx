@@ -1,5 +1,6 @@
-import Image from 'next/image';
+
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './index.module.css';
 import Category from '../Category';
@@ -17,15 +18,17 @@ export default function NewsList({ news }: Props) {
   }
 
   return (
-    <ul className={styles.list}>
-      <li className={`${styles.item} ${styles.news}`}>
+    <div className={styles.news}>
+      <div className={styles.titleContainer}>
         <h2 className={styles.playfairTitle}>News</h2>
-        <ButtonLink href="/news">ALL NEWS ON OUR BLOG</ButtonLink>
-      </li>
-      {news.map((article) => (
-        <li key={article.id} className={styles.item}>
-          <Link href={`/news/${article.id}`} className={styles.link}>
-            {article.thumbnail ? (
+        <div className={styles.buttonBox}>
+          <ButtonLink href="/news">SEE ALL</ButtonLink>
+        </div>
+      </div>
+      <ul className={styles.list}>
+        {news.map((article) => (
+          <li key={article.id} className={styles.item}>
+                        {article.thumbnail ? (
               <Image
                 className={styles.image}
                 src={article.thumbnail.url}
@@ -42,17 +45,17 @@ export default function NewsList({ news }: Props) {
                 height={630}
               />
             )}
-
-            <dl className={styles.content}>
-              <dt className={styles.title}>{article.title}</dt>
-              <dd className={styles.meta}>
-                <Category category={article.category} />
-                <Date date={article.publishedAt ?? article.createdAt} />
-              </dd>
-            </dl>
-          </Link>
-        </li>
-      ))}
-    </ul>
+            <Link href={`/news/${article.id}`} className={styles.link}>
+              <dl className={styles.content}>
+                <dt className={styles.title}>{article.title}</dt>
+                <dd className={styles.meta}>
+                  <Date date={article.publishedAt ?? article.createdAt} />
+                </dd>
+              </dl>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

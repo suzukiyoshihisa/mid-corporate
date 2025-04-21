@@ -2,6 +2,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 550px
 }
 
 .container {
@@ -20,6 +21,11 @@
   text-transform: uppercase;
   line-height: 1.2;
   border-bottom: 0.5px solid #ffffff;
+}
+
+.gridContainer {
+  height: 100%;
+  overflow: hidden;
 }
 
 .text {
@@ -48,8 +54,8 @@
 }
 
 .image {
-  width: 50%;
-  height: 50%;
+  width: 35%;
+  height: 35%;
 }
 
 .circle {
