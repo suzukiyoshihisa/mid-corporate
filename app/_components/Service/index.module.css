@@ -18,7 +18,7 @@
   display: grid;
   place-content: center;
   text-align: center;
-  height: 180px;
+  height: 260px;
 }
 
 .playfairTitle {
@@ -42,40 +42,34 @@
 
 .item {
   display: grid;
-  grid-row: span 5;
+  gap: 16px;
   background: #ffffff;
   padding: 50px 36px 70px;
   border-left: 1px solid #ccc;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
 }
 
 .title {
-  line-height: 1.2;
   text-align: center;
   border-bottom: 0.8px solid rgb(27, 29, 31);
-  height: 2em;
 }
 
-.itemImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 16px auto;
+.image {
+  width: 100%;
+  height: auto;
 }
 
 .itemHeading {
-  font-size: 15px;
-  line-height: 1.75;
+  font-size: 18px;
   text-align: center;
   font-weight: bold;
-  height: 5em;
 }
 
 .itemText {
-  margin: 8px auto 36px;
   color: rgb(119, 119, 119);
   font-size: 14px;
-  line-height: 1.75;
-  place-content: flex-start;
+  height: 14em;
 }
 
 .btnBox {

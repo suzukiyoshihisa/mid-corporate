@@ -21,12 +21,11 @@ export default function Service() {
               <h3 className={styles.title}>アパレル事業 1</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/service_wansie_img.webp"
+                  src="/wansie.png"
                   alt="wansie"
                   className={styles.image}
-                  width={120}
-                  height={120}
-                  style={{ aspectRatio: 224 / 180 }}
+                  width={256}
+                  height={144}
                   loading="lazy"
                 />
               </div>
@@ -48,12 +47,11 @@ export default function Service() {
               <h3 className={styles.title}>アパレル事業 2</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/service_uniform_img.webp"
+                  src="/uniform.jpg"
                   alt="wansie"
                   className={styles.image}
-                  width={120}
-                  height={120}
-                  style={{ aspectRatio: 224 / 180 }}
+                  width={256}
+                  height={144}
                   loading="lazy"
                 />
               </div>
@@ -75,14 +73,13 @@ export default function Service() {
               <h3 className={styles.title}>WEB・グラフィック事業</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/service_wansie_img.webp"
-                  alt="wansie"
-                  className={styles.image}
-                  width={120}
-                  height={120}
-                  style={{ aspectRatio: 224 / 180 }}
-                  loading="lazy"
-                />
+                    src="/wansie.png"
+                    alt="wansie"
+                    className={styles.image}
+                    width={256}
+                    height={144}
+                    loading="lazy"
+                  />
               </div>
               <p className={styles.itemHeading}>企画・制作・運用を<br/>オールインワン</p>
               <p className={styles.itemText}>
@@ -100,14 +97,13 @@ export default function Service() {
               <h3 className={styles.title}>人材派遣事業</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/service_uniform_img.webp"
+                  src="/uniform.jpg"
                   alt="wansie"
                   className={styles.image}
-                  width={120}
-                  height={120}
-                  style={{ aspectRatio: 224 / 180 }}
+                  width={256}
+                  height={144}
                   loading="lazy"
-                />
+                  />
               </div>
               <p className={styles.itemHeading}>企画・制作・運用を<br/>オールインワン</p>
               <p className={styles.itemText}>

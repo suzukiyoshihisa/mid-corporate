@@ -5,8 +5,7 @@
 	background-position: center;
   color: #ffffff;
   line-height: 1.75;
-  width: 25%;
-  margin-top: -1px;
+	height: 100%;
 }
 
 .title {
@@ -16,13 +15,12 @@
 }
 
 .name {
-  margin-top: 36px;
-	font-size: 15px;
+  margin-top: 24px;
+	font-size: 18px;
 	font-weight: 600;
 }
 
 .text {
   margin-top: 18px;
-	font-size: 15px;
 	text-shadow: 1px 1px 1px #000; 
 }
