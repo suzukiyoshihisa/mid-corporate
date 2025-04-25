@@ -1,6 +1,6 @@
 .contents {
   display: grid;
-  grid-template-columns: 25% 25% 50%;
+  grid-template-columns: 1fr 1fr 2fr;
   gap: 0px;
 }
 
@@ -23,6 +23,13 @@
 
 .playfairTitle {
   font-size: clamp(33.3px, 3.4722222222vw, 50px); 
+}
+
+.number {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .slides {

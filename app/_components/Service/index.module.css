@@ -12,17 +12,22 @@
 .div5 { grid-area: 2 / 4 / 3 / 5; }
 
 .serviceTextContainer {
-  background: url(/service-img.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
+  clip-path: inset(0);
   display: grid;
   place-content: center;
   text-align: center;
   height: 260px;
 }
 
+.parallax {
+  background: url(/service-img.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .playfairTitle {
-  padding: 52px 10px 0;
   font-family: "Playfair Display", serif;
   color: #ffffff;
   font-size: 50px;
@@ -34,9 +39,8 @@
 }
 
 .subTitle {
-  margin-bottom: 52px;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.75;
 }
 

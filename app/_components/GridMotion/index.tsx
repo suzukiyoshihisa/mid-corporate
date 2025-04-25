@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import "./GridMotion.css";
 
 interface GridMotionProps {
-  items?: string[];
+  items?: (string | React.ReactElement)[];
   gradientColor?: string;
 }
 

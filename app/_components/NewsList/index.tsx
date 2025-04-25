@@ -6,7 +6,6 @@ import styles from './index.module.css';
 import Category from '../Category';
 import Date from '../Date';
 import { News } from '@/app/_libs/microcms';
-import ButtonLink from "@/app/_components/ButtonLink";
 
 type Props = {
   news: News[];
@@ -21,9 +20,7 @@ export default function NewsList({ news }: Props) {
     <div className={styles.news}>
       <div className={styles.titleContainer}>
         <h2 className={styles.playfairTitle}>News</h2>
-        <div className={styles.buttonBox}>
-          <ButtonLink href="/news">SEE ALL</ButtonLink>
-        </div>
+        <p className={styles.subTitle}>midの最新情報をご紹介</p>
       </div>
       <ul className={styles.list}>
         {news.map((article) => (
@@ -56,6 +53,9 @@ export default function NewsList({ news }: Props) {
           </li>
         ))}
       </ul>
+      <div>
+        ほげ
+      </div>
     </div>
   );
 }

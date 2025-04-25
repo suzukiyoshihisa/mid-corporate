@@ -9,7 +9,7 @@ export default function Service() {
       <div className={styles.contents}>
         <div className={styles.div1}>
           <AnimatedContent delay={50}>
-            <div className={styles.serviceTextContainer}>
+            <div className={`${styles.serviceTextContainer} ${styles.parallax}`}>
               <h2 className={styles.playfairTitle}>Our Service</h2>
               <p className={styles.subTitle}>midの主要サービスをご紹介</p>
             </div>
@@ -42,7 +42,7 @@ export default function Service() {
           </AnimatedContent>
         </div>
         <div className={styles.div3}>
-          <AnimatedContent delay={250}>
+          <AnimatedContent delay={350}>
             <div className={styles.item}>
               <h3 className={styles.title}>アパレル事業 2</h3>
               <div className={styles.itemImg}>
@@ -68,7 +68,7 @@ export default function Service() {
           </AnimatedContent>
         </div>
         <div className={styles.div4}>
-          <AnimatedContent delay={100}>
+          <AnimatedContent delay={150}>
             <div className={`${styles.item} ${styles.specialItem}`}>
               <h3 className={styles.title}>WEB・グラフィック事業</h3>
               <div className={styles.itemImg}>

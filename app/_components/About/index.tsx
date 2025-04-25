@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import GridMotion from '@/app/_components/GridMotion';
+import SpotlightCard from '@/app/_components/SpotlightCard';
 import styles from './index.module.css';
   
 // note: you'll need to make sure the parent container of this component is sized properly
@@ -47,35 +48,37 @@ export default function About() {
       <div className={styles.gridContainer}>
         <GridMotion items={items} />
       </div>
-      <div className={styles.snsContainer}>
-        <div className={styles.snsTop}>
-          <div className={styles.snsTopImg}>
-            <Image
-              src="/about__sns-top.png"
-              alt="SNS Top Image"
-              className={styles.image}
-              width={154}
-              height={153}
-              priority={false}
-            />
+      <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+        <div className={styles.snsContainer}>
+          <div className={styles.snsTop}>
+            <div className={styles.snsTopImg}>
+              <Image
+                src="/about__sns-top.png"
+                alt="SNS Top Image"
+                className={styles.image}
+                width={154}
+                height={153}
+                priority={false}
+              />
+            </div>
           </div>
+          <p className={styles.playfairTitle}>sns.</p>
+          <ul className={styles.linkList}>
+            <li className={styles.linkItem}>
+              <Link href="https://www.facebook.com/wansietokyo/">
+                <div className={styles.circle}><FaFacebookF /></div>
+                <p className={styles.snsBottom}>wansietokyo</p>
+              </Link>
+            </li>
+            <li className={styles.linkItem}>
+              <Link href="https://www.instagram.com/wansie_official/">
+                <div className={styles.circle}><FaInstagram /></div>
+                <p className={styles.snsBottom}>wansie_official</p>
+              </Link>
+            </li>
+          </ul>
         </div>
-        <p className={styles.playfairTitle}>sns.</p>
-        <ul className={styles.linkList}>
-          <li className={styles.linkItem}>
-            <Link href="https://www.facebook.com/wansietokyo/">
-              <div className={styles.circle}><FaFacebookF /></div>
-              <p className={styles.snsBottom}>wansietokyo</p>
-            </Link>
-          </li>
-          <li className={styles.linkItem}>
-            <Link href="https://www.instagram.com/wansie_official/">
-              <div className={styles.circle}><FaInstagram /></div>
-              <p className={styles.snsBottom}>wansie_official</p>
-            </Link>
-          </li>
-        </ul>
-      </div>
+      </SpotlightCard>
     </div>
   );
 }

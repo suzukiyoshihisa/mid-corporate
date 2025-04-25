@@ -1,7 +1,7 @@
 
 'use client'
-import { EmblaCarousel } from '@/app/_components/Carousel';
 import CountUp from '@/app/_components/CountUp';
+import ClientsList from '@/app/_components/ClientsList';
 import styles from './index.module.css';
 
 export default function Clients() {
@@ -27,8 +27,8 @@ export default function Clients() {
           />
         </p>
       </div>
-      <div className={styles.slides}>
-        <EmblaCarousel/>
+      <div className={styles.client}>
+        <ClientsList/>
       </div>
     </div>
   );
