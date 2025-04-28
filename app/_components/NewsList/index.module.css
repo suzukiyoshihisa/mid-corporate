@@ -54,7 +54,8 @@
 }
 
 .link {
-  gap: 40px;
+  display: block;
+  width: 100%;
   padding: 8px 0;
 }
 
@@ -69,6 +70,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .title {
@@ -84,12 +86,13 @@
 }
 
 @media (max-width: 640px) {
+  .news {
+    display: block;
+  }
+  
   .link {
     display: block;
     padding: 16px 0;
-  }
-  .image {
-    display: none;
   }
 
   .title {
@@ -102,5 +105,9 @@
     display: flex;
     align-items: center;
     gap: 16px;
+  }
+
+  .titleContainer {
+    height: 260px;
   }
 }

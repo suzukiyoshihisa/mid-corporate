@@ -1,5 +1,4 @@
 .contents {
-  background: #101213;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: subgrid;
@@ -12,7 +11,6 @@
 .div5 { grid-area: 2 / 4 / 3 / 5; }
 
 .serviceTextContainer {
-  clip-path: inset(0);
   display: grid;
   place-content: center;
   text-align: center;
@@ -24,14 +22,12 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 .playfairTitle {
   font-family: "Playfair Display", serif;
   color: #ffffff;
   font-size: 50px;
-  font-style: italic;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -45,35 +41,33 @@
 }
 
 .item {
-  display: grid;
-  gap: 20px;
   background: #ffffff;
-  padding: 50px 36px 70px;
+  padding: 50px 36px 60px;
   border-left: 1px solid #ccc;
-  grid-template-rows: subgrid;
-  grid-row: span 5;
 }
 
 .title {
   text-align: center;
+  margin-bottom: 16px;
   border-bottom: 0.8px solid rgb(27, 29, 31);
 }
 
 .image {
   width: 100%;
-  height: auto;
 }
 
 .itemHeading {
-  font-size: 16px;
+  font-size: 18px;
+  margin-bottom: 16px;
   text-align: center;
   font-weight: bold;
 }
 
 .itemText {
-  color: rgb(119, 119, 119);
+  color: #333;
   font-size: 14px;
   height: 14em;
+  margin-bottom: 30px;
 }
 
 .btnBox {
@@ -109,4 +103,32 @@
   .serviceTextContainer {
     padding-left: 0;
   }
+
+  .contents {
+    display: block;
+  }
+
+  .itemText {
+    height: auto;
+  }
+
+  .title {
+    border: none;
+  }
+
+  .specialItem {
+    background: #ffffff;
+    color: #333;
+  }
+  
+  .specialItem .title {
+    color: #333;
+    border-bottom: 0.8px solid #ffffff;
+  }
+  
+  .specialItem .itemText {
+    color: rgb(119, 119, 119);
+    font-size: 16px;
+  }
+
 }

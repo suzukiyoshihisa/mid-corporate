@@ -39,9 +39,35 @@
 }
 
 .engage {
-  background: url(/engage_pc.png) no-repeat;
-  background-size: contain;
-  display: block;
+  background: url(https://en-gage.net/imageFile_new/company/widget_banner_C_pc_728×90.png) no-repeat;
+  background-size: cover;
+  display: flex;
   height: 100px;
-  margin: 8px;
+}
+
+@media (max-width: 640px) {
+  .contents {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .address {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .content1 { grid-area: 1 / 1 / 2 / 2;}
+  .content2 { grid-area: 2 / 1 / 3 / 2;}
+  .content3 { grid-area: 3 / 1 / 4 / 2;}
+  
+  .inner {
+    padding: 50px;
+    text-align: left;
+    font-size: 16px;
+    line-height: normal;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
 }

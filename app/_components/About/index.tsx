@@ -7,15 +7,25 @@ import styles from './index.module.css';
   
 // note: you'll need to make sure the parent container of this component is sized properly
 const items = [
-  'mid-1',
-  'mid2',
+  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://wansie.tokyo/shared/img/collections/2025-fw/img020.jpg',
   'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-right.jpg',
   'https://wansie.tokyo/shared/img/collections/2025-fw/img020.jpg',
   'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 5',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 7',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
+  'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jp',
+  'https://wansie.tokyo/shared/img/shop-info/WANSIE_SHOP_ILLUST.webp',
+  <div key='jsx-item-2'>
+    <Image
+      src="/about__sns-top.png"
+      alt="Custom Image"
+      className={styles.image}
+      width={154}
+      height={153}
+      priority={false}
+    />
+    <p className={styles.name}>WANSIE FLAGSHIP STORE </p>
+  </div>,
+  'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jpg',
   'https://wansie.tokyo/shared/img/shop-info/WANSIE_SHOP_ILLUST.webp',
   'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jpg',
   <div key='jsx-item-2'>

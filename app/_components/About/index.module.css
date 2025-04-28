@@ -6,20 +6,19 @@
 }
 
 .container {
-  padding: 10%;
+  padding: 50px;
   background: #1583d1;
 }
 
 .title {
-  padding: 36px 10px;
+  padding-bottom: 36px;
   font-family: "Playfair Display", serif;
   color: #ffffff;
   font-size: 50px;
-  font-style: italic;
   font-weight: 600;
   text-align: center;
-  text-transform: uppercase;
   line-height: 1.2;
+  text-transform: uppercase;
   border-bottom: 0.5px solid #ffffff;
 }
 
@@ -31,7 +30,7 @@
 .text {
   color: #ffffff;
   margin-top: 36px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
 }
 
@@ -80,8 +79,6 @@
   display: block;
   margin-top: 18px;
   color: #ffffff;
-  font-size: 12px;
-  line-height: 1.75;
   text-transform: uppercase;
   text-align: center;
   transition: 0.3s;
@@ -114,11 +111,17 @@
 }
 
 @media screen and (max-width: 960px) {
-  .linkList {
-    grid-template-columns: repeat(2, 1fr);
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-inline: auto;
+  .title {
+    padding: 0 0 16px;
+  }
+
+  .text {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .gridContainer {
+    height: 550px;
   }
 
   .about__sns-top-img {
@@ -139,11 +142,5 @@
 
   .inner {
     grid-template-columns: 1fr;
-  }
-
-  @media screen and (max-width: 570px) {
-    .sectionTitle {
-      font-size: 35px;
-    }
   }
 }

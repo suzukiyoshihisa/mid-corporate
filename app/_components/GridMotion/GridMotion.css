@@ -100,3 +100,9 @@
 p {
   font-size: 12px;
 }
+
+@media screen and (max-width: 960px) {
+  .row {
+    grid-template-columns: repeat(8, 200px);
+  }
+}

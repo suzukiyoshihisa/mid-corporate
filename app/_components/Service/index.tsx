@@ -36,7 +36,7 @@ export default function Service() {
                 WANSIEは伝統的なワークウェアやユニフォームの機能性と技術的な仕立ての技法をベースとしたワークウェアのスペシャリティブランド。オンとオフ、多様なカルチャーが入り混じる現代人のための、モード感と機能美を兼ね備えたデイリーウェアとなっております。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://www.wansie.tokyo/">more</ButtonLink>
+                <ButtonLink href="https://www.wansie.tokyo/" variant="arrow">more</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
@@ -56,13 +56,13 @@ export default function Service() {
                 />
               </div>
               <p className={styles.itemHeading}>
-                店舗やオフィスの<br/>オリジナルユニフォーム制作
+                店舗やオフィスの<br/>オリジナルユニフォーム
               </p>
               <p className={styles.itemText}>
                 WANSIEがデザインから生産まで手掛けるオリジナルユニフォームは様々なシーンでのスタイル提案が可能です。きめ細かいサービスでクライアント様の要望を形にし、OEMや小ロット生産も対応。店舗や企業の魅力が引き立つワークスタイルを実現。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://wansie.tokyo/uniform/">more</ButtonLink>
+                <ButtonLink href="https://wansie.tokyo/uniform/" variant="arrow">more</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
@@ -70,7 +70,7 @@ export default function Service() {
         <div className={styles.div4}>
           <AnimatedContent delay={150}>
             <div className={`${styles.item} ${styles.specialItem}`}>
-              <h3 className={styles.title}>WEB・グラフィック事業</h3>
+              <h3 className={styles.title}>WEB制作事業</h3>
               <div className={styles.itemImg}>
                 <Image
                     src="/wansie.png"
@@ -86,7 +86,7 @@ export default function Service() {
                 ホームページ、EC、システム開発、グラフィックデザインなどの企画制作・運用サービスにおいて国内外の制作実績が多数ございます。インバウンド対策、海外クライアントとお取引のある企業様のサポート、外資系企業様での日々のサイト運用など多岐に渡る業務を遂行。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-group.design/">more</ButtonLink>
+                <ButtonLink href="https://mid-group.design/" variant="arrow_white">more</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
@@ -97,7 +97,7 @@ export default function Service() {
               <h3 className={styles.title}>人材派遣事業</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/uniform.jpg"
+                  src="/staff.png"
                   alt="wansie"
                   className={styles.image}
                   width={256}
@@ -105,12 +105,12 @@ export default function Service() {
                   loading="lazy"
                   />
               </div>
-              <p className={styles.itemHeading}>企画・制作・運用を<br/>オールインワン</p>
+              <p className={styles.itemHeading}>最適な出会いを創出する<br/>人材派遣事業</p>
               <p className={styles.itemText}>
               WEBマーケティングを活かし、各業界と人材をつなぐマッチングに強みを持つ人材会社です。これまで培ってきたデジタル領域での集客力や分析力を活用し、企業と求職者双方にとって最適な出会いをサポートしています。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-group.design/">more</ButtonLink>
+                <ButtonLink href="https://mid-group.design/" variant="arrow_white">more</ButtonLink>
               </div>
             </div>
           </AnimatedContent>

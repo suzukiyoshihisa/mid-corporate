@@ -2,19 +2,78 @@
   display: block;
   border-radius: var(--border-radius);
   width: 100px;
-  background: url('/arrow-right.svg') no-repeat right 20px center,
-    var(--color-button-primary);
   color: var(--color-text-unpainted);
   text-align: center;
   padding: 5px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.normal {
+  background: url('/arrow-right.svg') no-repeat right 20px center,
+    var(--color-button-primary);
+  color: var(--color-text-unpainted);
   background: #1b1d1f;
   transition: 0.3s;
   font-size: 13px;
 }
 
-.button:hover {
+.normal:hover {
   opacity: 0.9;
   background: #0d6aa8;
+}
+
+.arrow {
+  display: block;
+  color: #000;
+  position: relative;
+  transition: 0.3s;
+  width: 84px;
+  text-transform: uppercase;
+}
+
+.arrow::before {
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  transition: 0.3s;
+  mask-image: url(/arrow.svg);
+  background: #000;
+  width: 84px;
+  height: 4px;
+  content: "";
+}
+
+.arrow:hover::before {
+  bottom: -4px;
+  left: 6px;
+}
+
+.arrow_white {
+  display: block;
+  color: #fff;
+  position: relative;
+  transition: 0.3s;
+  width: 84px;
+  text-transform: uppercase;
+}
+
+.arrow_white::before {
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  transition: 0.3s;
+  mask-image: url(/arrow.svg);
+  background: #fff;
+  width: 84px;
+  height: 4px;
+  content: "";
+}
+
+.arrow_white:hover::before {
+  bottom: -4px;
+  left: 6px;
 }
 
 @media (max-width: 640px) {
