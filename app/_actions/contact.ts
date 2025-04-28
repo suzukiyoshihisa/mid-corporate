@@ -8,23 +8,16 @@ function validateEmail(email: string) {
 export async function createContactData(_prevState: unknown, formData: FormData) {
   // formのname属性ごとにformData.get()で値を取り出すことができる
   const rawFormData = {
-    lastname: formData.get("lastname") as string,
-    firstname: formData.get("firstname") as string,
+    name: formData.get("name") as string,
     company: formData.get("company") as string,
     email: formData.get("email") as string,
     message: formData.get("message") as string,
   };
 
-  if (!rawFormData.lastname) {
+  if (!rawFormData.name) {
     return {
       status: "error",
-      message: "姓を入力してください",
-    };
-  }
-  if (!rawFormData.firstname) {
-    return {
-      status: "error",
-      message: "名を入力してください",
+      message: "お名前を入力してください",
     };
   }
   if (!rawFormData.company) {
@@ -63,13 +56,8 @@ export async function createContactData(_prevState: unknown, formData: FormData)
         fields: [
           {
             objectTypeId: "0-1",
-            name: "lastname",
-            value: rawFormData.lastname,
-          },
-          {
-            objectTypeId: "0-1",
-            name: "firstname",
-            value: rawFormData.firstname,
+            name: "name",
+            value: rawFormData.name,
           },
           {
             objectTypeId: "0-1",

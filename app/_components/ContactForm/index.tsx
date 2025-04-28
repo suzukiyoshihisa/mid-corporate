@@ -29,33 +29,22 @@ export default function ContactForm() {
   return (
     <form className={styles.form} action={formAction} onSubmit={handleSubmit}>
       <h2 className={styles.sectionTitle}>Contact</h2>
-      <p className={styles.text}>
+      <p className={styles.subTitle}>
       サービスや採用に関することなど、<br/>
       下記フォームよりお気軽にお問い合わせください。</p>
-      <div className={styles.horizontal}>
-        <div className={styles.item}>
-          <label className={styles.label} htmlFor="lastname">
-            姓
-          </label>
-          <input
-            className={styles.textfield}
-            type="text"
-            id="lastname"
-            name="lastname"
-          />
-        </div>
-        <div className={styles.item}>
-          <label className={styles.label} htmlFor="firstname">
-            名
-          </label>
-          <input
-            className={styles.textfield}
-            type="text"
-            id="firstname"
-            name="firstname"
-          />
-        </div>
+
+      <div className={styles.item}>
+        <label className={styles.label} htmlFor="name">
+          お名前
+        </label>
+        <input
+          className={styles.textfield}
+          type="text"
+          id="name"
+          name="name"
+        />
       </div>
+
       <div className={styles.item}>
         <label className={styles.label} htmlFor="company">
           会社名
@@ -88,7 +77,7 @@ export default function ContactForm() {
         {state.status === 'error' && (
           <p className={styles.error}>{state.message}</p>
         )}
-        <input type="submit" value="送信する" className={styles.button} />
+        <input type="submit" value="submit" className={styles.button} />
       </div>
     </form>
   );

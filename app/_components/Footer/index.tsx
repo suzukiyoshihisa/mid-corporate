@@ -10,7 +10,7 @@ export default function Footer() {
           <li className={styles.item}>
             <div className={styles.contents}>
               <div className={styles.infoContainer}>
-                <h2 className={styles.sectionTitle}>Company Info.</h2>
+                <h2 className={styles.sectionTitle}>Company Info</h2>
                 <ul className={styles.infoList}>
                   <li className={styles.infoItem}>
                     <h3 className={styles.infoTitle}>社名</h3>
@@ -23,12 +23,11 @@ export default function Footer() {
                       〒160-0022<br />
                       東京都新宿区新宿5-11-25<br />
                       アソルティ新宿五丁目ビル 201
-                    </p>
-                    <p className={styles.infoText}>
+                      <br/><br/>
                       【福岡支社】<br />
                       〒810-0042<br />
                       福岡県福岡市中央区赤坂1丁目8-23
-                    </p>
+                      </p>
                   </li>
                   <li className={styles.infoItem}>
                     <h3 className={styles.infoTitle}>事業内容</h3>

@@ -46,7 +46,7 @@
 
 .item {
   display: grid;
-  gap: 16px;
+  gap: 20px;
   background: #ffffff;
   padding: 50px 36px 70px;
   border-left: 1px solid #ccc;
@@ -65,7 +65,7 @@
 }
 
 .itemHeading {
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   font-weight: bold;
 }

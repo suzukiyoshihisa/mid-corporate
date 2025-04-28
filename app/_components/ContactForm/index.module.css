@@ -8,29 +8,17 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 8px 0;
-  margin-top: 36px;
+  margin-top: 24px;
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.75;
-  text-align: center;
 }
 
-.text {
-  width: 100%;
+.sectionTitle {
+  font-size: 50px;
+  font-family: Playfair Display, serif;
 }
 
-.horizontal {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  gap: 24px;
-}
-
-.label {
-  font-size: 14px;
+.subTitle {
+  font-size: 16px;
 }
 
 .textfield {
@@ -43,8 +31,8 @@
 .textarea {
   padding: 8px;
   border-radius: 4px;
-  line-height: 1.5;
   width: 100%;
+  height: 10em;
 }
 
 .actions {
@@ -63,7 +51,6 @@
 }
 
 .success {
-  background-color: var(--color-bg-sub);
   text-align: center;
   padding: 40px;
   border-radius: var(--border-radius);

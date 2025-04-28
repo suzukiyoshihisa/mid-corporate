@@ -53,9 +53,6 @@ export default function NewsList({ news }: Props) {
           </li>
         ))}
       </ul>
-      <div>
-        ほげ
-      </div>
     </div>
   );
 }

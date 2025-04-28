@@ -107,7 +107,7 @@ export default function Service() {
               </div>
               <p className={styles.itemHeading}>企画・制作・運用を<br/>オールインワン</p>
               <p className={styles.itemText}>
-                ホームページ、EC、システム開発、グラフィックデザインなどの企画制作・運用サービスにおいて国内外の制作実績が多数ございます。インバウンド対策、海外クライアントとお取引のある企業様のサポート、外資系企業様での日々のサイト運用など多岐に渡る業務を遂行。
+              WEBマーケティングを活かし、各業界と人材をつなぐマッチングに強みを持つ人材会社です。これまで培ってきたデジタル領域での集客力や分析力を活用し、企業と求職者双方にとって最適な出会いをサポートしています。
               </p>
               <div className={styles.btnBox}>
                 <ButtonLink href="https://mid-group.design/">more</ButtonLink>
