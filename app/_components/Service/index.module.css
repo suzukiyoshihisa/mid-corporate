@@ -54,6 +54,7 @@
 
 .image {
   width: 100%;
+  height: auto;
 }
 
 .itemHeading {
@@ -106,6 +107,11 @@
 
   .contents {
     display: block;
+  }
+
+  .item {
+    border-top: 1px solid #333;
+    border-left: none;
   }
 
   .itemText {

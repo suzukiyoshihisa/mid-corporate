@@ -110,13 +110,26 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 640px) {
+  .inner {
+    grid-template-rows: 1fr;
+  }
+
+  .image {
+    width: 25%;
+    height: 25%;
+  }
+
+  .container {
+    padding: 10%;
+  }
+
   .title {
     padding: 0 0 16px;
   }
 
   .text {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
@@ -142,16 +155,5 @@
 
   .inner {
     grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .inner {
-    grid-template-rows: 1fr;
-  }
-
-  .image {
-    width: 25%;
-    height: 25%;
   }
 }
