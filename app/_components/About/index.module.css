@@ -144,3 +144,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .inner {
+    grid-template-rows: 1fr;
+  }
+
+  .image {
+    width: 25%;
+    height: 25%;
+  }
+}
