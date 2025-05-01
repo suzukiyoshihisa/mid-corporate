@@ -43,11 +43,31 @@
 
 @media (max-width: 640px) {
   .items {
-    flex-wrap: wrap;
-    gap: 8px 0;
+    grid-template-columns: 1fr;
   }
 
-  .item {
-    width: 50%;
+  .sectionTitle {
+    font-size: 30px;
+  }
+
+  .infoItem {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .infoTitle {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .infoText {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .footer {
+    padding-bottom: 50px;
   }
 }
