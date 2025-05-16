@@ -43,9 +43,9 @@
 
   .text {
     display: flex;
-    gap: 10px;
+    gap: 50px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .number {

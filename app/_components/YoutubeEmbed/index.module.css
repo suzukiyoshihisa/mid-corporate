@@ -15,11 +15,12 @@
   border: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .wrapper {
     position: relative;
     width: 100%;
-    height: 242px; /* 任意の高さに変更可能 */
+    height: 220px; /* 任意の高さに変更可能 */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     background-color: #000;
   }

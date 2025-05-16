@@ -45,7 +45,7 @@
   height: 100px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .contents {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -61,9 +61,14 @@
   .content3 { grid-area: 3 / 1 / 4 / 2;}
   
   .inner {
-    padding: 50px;
+    width: 90%;
+    padding: 50px 5%;
     text-align: left;
     font-size: 16px;
     line-height: normal;
+  }
+
+  .engage {
+    display: none;
   }
 }
