@@ -1,4 +1,4 @@
-import ContactForm from '../ContactForm';
+import ContactForm from '../ContactForm/index';
 import styles from './index.module.css';
 
 export default function Footer() {
