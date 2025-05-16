@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import styles from "./index.module.css";
 import Profile from '@/app/_components/Profile'
 import YoutubeEmbed from "@/app/_components/YoutubeEmbed";
