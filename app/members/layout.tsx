@@ -1,5 +1,5 @@
-import Sheet from '@/app/_components/Sheet';
-import Hero from '@/app/_components/Hero';
+import Sheet from '@/app/_components/Sheet/index';
+import Hero from '@/app/_components/Hero/index';
 
 export const metadata = {
   title: 'MEMBERS',
