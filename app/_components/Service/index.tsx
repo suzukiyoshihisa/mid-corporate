@@ -67,7 +67,7 @@ export default function Service() {
             </div>
           </AnimatedContent>
         </div>
-        <div className={styles.div4}>
+        <div className={`${styles.div4} ${styles.special}`}>
           <AnimatedContent delay={150}>
             <div className={`${styles.item} ${styles.specialItem}`}>
               <h3 className={styles.title}>WEB制作事業</h3>
@@ -91,7 +91,7 @@ export default function Service() {
             </div>
           </AnimatedContent>
         </div>
-        <div className={styles.div5}>
+        <div className={`${styles.div5} ${styles.special}`}>
           <AnimatedContent delay={150}>
             <div className={`${styles.item} ${styles.specialItem}`}>
               <h3 className={styles.title}>人材派遣事業</h3>

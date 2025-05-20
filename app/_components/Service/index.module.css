@@ -41,7 +41,6 @@
 }
 
 .item {
-  background: #ffffff;
   padding: 50px 36px 60px;
   border-left: 1px solid #ccc;
 }
@@ -78,17 +77,17 @@
 }
 
 /* 3つ目のアイテムだけスタイル変更 */
-.specialItem {
+.special {
   background: #1583d1;
   color: #ffffff;
 }
 
-.specialItem .title {
+.special .title {
   color: #ffffff;
   border-bottom: 0.8px solid #ffffff;
 }
 
-.specialItem .itemText {
+.special .itemText {
   color: #ffffff;
 }
 
