@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import cx from 'classnames';
 import styles from './index.module.css';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export default function Menu() {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -16,19 +17,19 @@ export default function Menu() {
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           <li>
-            <Link href="#about">ABOUT US</Link>
+            <AnchorLink href="#about">ABOUT US</AnchorLink>
           </li>
           <li>
-            <Link href="#service">OUR SERVICE</Link>
+            <AnchorLink href="#service">SERVICE</AnchorLink>
           </li>
           <li>
             <Link href="/news">NEWS</Link>
           </li>
           <li>
-            <Link href="#address">ADDRESS</Link>
+            <AnchorLink href="#address">ADDRESS</AnchorLink>
           </li>
           <li>
-            <Link href="/contact">CONTACT</Link>
+            <AnchorLink href="#footer">CONTACT</AnchorLink>
           </li>
         </ul>
         <button className={cx(styles.button, styles.close)} onClick={close}>

@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       <nav className={styles.nav}>
         <ul className={styles.items}>
           <li className={styles.item}>

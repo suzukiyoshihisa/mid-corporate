@@ -45,7 +45,7 @@ const items = [
 
 export default function About() {
   return (
-    <div className={styles.inner}>
+    <div className={styles.inner} id="about">
       <div className={styles.container}>
         <AnimatedContent delay={0}>
           <h2 className={styles.title}>About Us.</h2>
