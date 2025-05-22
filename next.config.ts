@@ -1,13 +1,9 @@
-import path from "path";
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  webpack(config) {
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      "@": path.resolve(__dirname),
-    };
-    return config;
+  // @ts-expect-error: tsconfigPaths is valid but not yet typed in NextConfig
+  experimental: {
+    tsconfigPaths: true,
   },
 };
 
