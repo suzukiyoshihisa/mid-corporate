@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
-import Profile from '@/app/_components/Profile'
-import YoutubeEmbed from "@/app/_components/YoutubeEmbed";
+import Profile from '../Profile'
+import YoutubeEmbed from '../YoutubeEmbed';
 import Link from "next/link";
-import SpotlightCard from '@/app/_components/SpotlightCard';
-import AnimatedContent from '@/app/_components/AnimatedContent';
+import SpotlightCard from '../SpotlightCard';
+import AnimatedContent from '../AnimatedContent';
 
 export default function Address() {
   return (

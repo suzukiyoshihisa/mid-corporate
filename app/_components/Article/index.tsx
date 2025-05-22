@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import type { News } from '@/app/_libs/microcms';
+import type { News } from '../../_libs/microcms';
 import Date from '../Date';
 import Category from '../Category';
 import styles from './index.module.css';

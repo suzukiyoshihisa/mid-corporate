@@ -1,13 +1,13 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { getNewsList } from "@/app/_libs/microcms";
+import { getNewsList } from "./_libs/microcms";
 import { TOP_NEWS_LIMIT } from "./_constants";
-import LatestNewsText from '@/app/_components/NewsText'
-import About from "@/app/_components/About";
-import Service from "@/app/_components/Service";
-import NewsList from '@/app/_components/NewsList'
-import Address from '@/app/_components/Address'
-import Clients from '@/app/_components/Clients'
+import LatestNewsText from './_components/NewsText'
+import About from './_components/About'
+import Service from './_components/Service'
+import NewsList from './_components/NewsList'
+import Address from './_components/Address'
+import Clients from './_components/Clients'
 
 export const revalidate = 60;
 

@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import AnimatedContent from '@/app/_components/AnimatedContent';
+import AnimatedContent from '../AnimatedContent';
 
 export default function Profile() {
   return (

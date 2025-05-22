@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { getNewsList } from '@/app/_libs/microcms';
-import Date from '@/app/_components/Date';
-import AnimatedContent from '@/app/_components/AnimatedContent';
+import { getNewsList } from '../../_libs/microcms';
+import Date from '../Date';
+import AnimatedContent from '../AnimatedContent';
 import styles from './index.module.css';
 
 export default async function LatestNewsText() {

@@ -1,7 +1,7 @@
 
 'use client'
-import CountUp from '@/app/_components/CountUp';
-import ClientsList from '@/app/_components/ClientsList';
+import CountUp from '../CountUp';
+import ClientsList from '../ClientsList';
 import styles from './index.module.css';
 
 export default function Clients() {

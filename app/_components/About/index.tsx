@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import GridMotion from '@/app/_components/GridMotion';
-import SpotlightCard from '@/app/_components/SpotlightCard';
+import GridMotion from '../GridMotion';
+import SpotlightCard from '../SpotlightCard';
 import styles from './index.module.css';
-import AnimatedContent from '@/app/_components/AnimatedContent';
+import AnimatedContent from '../AnimatedContent';
   
 // note: you'll need to make sure the parent container of this component is sized properly
 const items = [

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
-import ButtonLink from "@/app/_components/ButtonLink";
-import AnimatedContent from '@/app/_components/AnimatedContent';
+import ButtonLink from "../ButtonLink";
+import AnimatedContent from "../AnimatedContent";
 
 export default function Service() {
   return (

@@ -1,4 +1,4 @@
-import { NEWS_LIST_LIMIT } from '@/app/_constants';
+import { NEWS_LIST_LIMIT } from '../../_constants';
 import Link from 'next/link';
 import styles from './index.module.css';
 
