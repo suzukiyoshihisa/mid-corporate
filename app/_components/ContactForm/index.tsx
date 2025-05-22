@@ -1,7 +1,7 @@
 'use client';
 
 import { sendGAEvent } from '@next/third-parties/google';
-import { createContactData } from '@/app/_actions/contact';
+import { createContactData } from '../../_actions/contact';
 import { useActionState } from 'react';
 import styles from './index.module.css';
 

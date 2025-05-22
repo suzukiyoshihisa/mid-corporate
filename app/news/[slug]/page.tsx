@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getNewsDetail } from '@/app/_libs/microcms';
-import Article from '@/app/_components/Article';
-import ButtonLink from '@/app/_components/ButtonLink';
+import { getNewsDetail } from '../../_libs/microcms';
+import Article from '../../_components/Article';
+import ButtonLink from '../../_components/ButtonLink';
 import styles from './page.module.css';
 
 type Props = {
