@@ -42,6 +42,7 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
+          placeholder="(例)Taro Yamada"
         />
       </div>
 
@@ -54,6 +55,7 @@ export default function ContactForm() {
           type="text"
           id="company"
           name="company"
+          placeholder="(例)株式会社mid"
         />
       </div>
       <div className={styles.item}>
@@ -65,13 +67,14 @@ export default function ContactForm() {
           type="text"
           id="email"
           name="email"
+          placeholder="(例)test@example.com"
         />
       </div>
       <div className={styles.item}>
         <label className={styles.label} htmlFor="message">
           メッセージ
         </label>
-        <textarea className={styles.textarea} id="message" name="message" />
+        <textarea className={styles.textarea} id="message" name="message" placeholder="(例) サービスについてのご質問など" />
       </div>
       <div className={styles.actions}>
         {state.status === 'error' && (

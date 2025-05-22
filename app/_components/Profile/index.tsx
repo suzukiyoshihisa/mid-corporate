@@ -3,8 +3,8 @@ import styles from "./index.module.css";
 export default function Profile() {
   return (
     <section className={styles.profile} id="profile">
-      <h2 className={styles.title}>Profile</h2>
       <div className={styles.profileContent}>
+        <h2 className={styles.title}>Profile</h2>
         <div className={styles.profileData}>
           <p className={styles.name}>
             代表取締役：廣田将大

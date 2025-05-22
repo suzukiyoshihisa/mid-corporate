@@ -71,4 +71,8 @@
   .engage {
     display: none;
   }
+
+  .title {
+		font-size: 32px;
+	}
 }
