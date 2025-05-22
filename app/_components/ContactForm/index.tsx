@@ -12,11 +12,11 @@ const initialState = {
 
 export default function ContactForm() {
   const [state, formAction] = useActionState(createContactData, initialState);
-  console.log(state);
 
-  const handleSubmit = () => {
-    sendGAEvent({event:'contact', value: 'submit'});
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    sendGAEvent({ event: 'contact', value: 'submit' });
   };
+
   if (state.status === 'success') {
     return (
       <p className={styles.success}>
@@ -26,12 +26,14 @@ export default function ContactForm() {
       </p>
     );
   }
+
   return (
     <form className={styles.form} action={formAction} onSubmit={handleSubmit}>
       <h2 className={styles.sectionTitle}>Contact</h2>
       <p className={styles.subTitle}>
-      サービスや採用に関することなど、<br/>
-      下記フォームよりお気軽にお問い合わせください。</p>
+        サービスや採用に関することなど、<br />
+        下記フォームよりお気軽にお問い合わせください。
+      </p>
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="name">
@@ -58,24 +60,32 @@ export default function ContactForm() {
           placeholder="(例)株式会社mid"
         />
       </div>
+
       <div className={styles.item}>
         <label className={styles.label} htmlFor="email">
           メールアドレス
         </label>
         <input
           className={styles.textfield}
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="(例)test@example.com"
         />
       </div>
+
       <div className={styles.item}>
         <label className={styles.label} htmlFor="message">
           メッセージ
         </label>
-        <textarea className={styles.textarea} id="message" name="message" placeholder="(例) サービスについてのご質問など" />
+        <textarea
+          className={styles.textarea}
+          id="message"
+          name="message"
+          placeholder="(例) サービスについてのご質問など"
+        />
       </div>
+
       <div className={styles.actions}>
         {state.status === 'error' && (
           <p className={styles.error}>{state.message}</p>
