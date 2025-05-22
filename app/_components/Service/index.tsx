@@ -8,15 +8,15 @@ export default function Service() {
     <section className={styles.service} id="service">
       <div className={styles.contents}>
         <div className={styles.div1}>
-          <AnimatedContent delay={50}>
-            <div className={`${styles.serviceTextContainer} ${styles.parallax}`}>
+          <div className={`${styles.serviceTextContainer} ${styles.parallax}`}>
+            <AnimatedContent delay={0}>
               <h2 className={styles.playfairTitle}>Our Service</h2>
               <p className={styles.subTitle}>midの主要サービスをご紹介</p>
-            </div>
-          </AnimatedContent>
+            </AnimatedContent>
+          </div>
         </div>
         <div className={styles.div2}>
-          <AnimatedContent delay={0}>
+          <AnimatedContent delay={50}>
             <div className={styles.item}>
               <h3 className={styles.title}>アパレル事業 1</h3>
               <div className={styles.itemImg}>
@@ -42,7 +42,7 @@ export default function Service() {
           </AnimatedContent>
         </div>
         <div className={styles.div3}>
-          <AnimatedContent delay={350}>
+          <AnimatedContent delay={100}>
             <div className={styles.item}>
               <h3 className={styles.title}>アパレル事業 2</h3>
               <div className={styles.itemImg}>
@@ -92,7 +92,7 @@ export default function Service() {
           </AnimatedContent>
         </div>
         <div className={`${styles.div5} ${styles.special}`}>
-          <AnimatedContent delay={150}>
+          <AnimatedContent delay={200}>
             <div className={`${styles.item} ${styles.specialItem}`}>
               <h3 className={styles.title}>人材派遣事業</h3>
               <div className={styles.itemImg}>
