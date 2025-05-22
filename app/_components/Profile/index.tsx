@@ -1,11 +1,13 @@
 import styles from "./index.module.css";
+import AnimatedContent from '@/app/_components/AnimatedContent';
 
 export default function Profile() {
   return (
     <section className={styles.profile} id="profile">
-      <div className={styles.profileContent}>
-        <h2 className={styles.title}>Profile</h2>
-        <div className={styles.profileData}>
+      <AnimatedContent delay={50}>
+        <div className={styles.profileContent}>
+          <h2 className={styles.title}>Profile</h2>
+          <div className={styles.profileData}>
           <p className={styles.name}>
             代表取締役：廣田将大
           </p>
@@ -16,9 +18,10 @@ export default function Profile() {
 						2012年 JPモルガン証券株式会社に入社。内部統制など様々なプロジェクトマネジメントを担当。<br />
 						退社後、システム開発・WEBディレクターとしてフリーで活動。<br />
 						2014年 株式会社midを設立。
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
+      </AnimatedContent>
     </section>
   );
 }
