@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import GridMotion from '@/app/_components/GridMotion';
 import SpotlightCard from '@/app/_components/SpotlightCard';
 import styles from './index.module.css';
+import AnimatedContent from '@/app/_components/AnimatedContent';
   
 // note: you'll need to make sure the parent container of this component is sized properly
 const items = [
@@ -45,49 +46,55 @@ const items = [
 export default function About() {
   return (
     <div className={styles.inner}>
-      <div className={`${styles.container} ${styles.animatedFadeIn} ${styles.delay0}`}>
-        <h2 className={styles.title}>About Us.</h2>
-        <p className={styles.text}>
-          株式会社mid（ミッド）は、新宿に拠点を置くクリエイティブカンパニー。<br/>自社ブランド「WANSIE（ワンジー）」の企画・製造をはじめ、WEB制作やグラフィックデザイン、人材派遣など、領域を横断した事業を展開しています。
-        </p>
-        <p className={styles.text}>
-          私たちが大切にしているのは、表面的なトレンドに流されることなく、個人や企業が持つ本来の魅力や事業の本質に目を向けること。
-          長く愛される価値を築くために、丁寧に言葉を交わしながら、その核を形にしていきます。
-        </p>
+      <div className={styles.container}>
+        <AnimatedContent delay={0}>
+          <h2 className={styles.title}>About Us.</h2>
+          <p className={styles.text}>
+            株式会社mid（ミッド）は、新宿に拠点を置くクリエイティブカンパニー。<br/>自社ブランド「WANSIE（ワンジー）」の企画・製造をはじめ、WEB制作やグラフィックデザイン、人材派遣など、領域を横断した事業を展開しています。
+          </p>
+          <p className={styles.text}>
+            私たちが大切にしているのは、表面的なトレンドに流されることなく、個人や企業が持つ本来の魅力や事業の本質に目を向けること。
+            長く愛される価値を築くために、丁寧に言葉を交わしながら、その核を形にしていきます。
+          </p>
+        </AnimatedContent>
       </div>
       <div className={styles.gridContainer}>
-        <GridMotion items={items} />
+        <AnimatedContent delay={100}>
+          <GridMotion items={items} />
+        </AnimatedContent>
       </div>
       <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-        <div className={styles.snsContainer}>
-          <div className={styles.snsTop}>
-            <div className={styles.snsTopImg}>
-              <Image
-                src="/about__sns-top.png"
-                alt="SNS Top Image"
-                className={styles.image}
-                width={154}
-                height={153}
-                priority={false}
-              />
+        <AnimatedContent delay={350}>
+          <div className={styles.snsContainer}>
+            <div className={styles.snsTop}>
+              <div className={styles.snsTopImg}>
+                <Image
+                  src="/about__sns-top.png"
+                  alt="SNS Top Image"
+                  className={styles.image}
+                  width={154}
+                  height={153}
+                  priority={false}
+                />
+              </div>
             </div>
+            <p className={styles.playfairTitle}>sns.</p>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}>
+                <Link href="https://www.facebook.com/wansietokyo/">
+                  <div className={styles.circle}><FaFacebookF /></div>
+                  <p className={styles.snsBottom}>wansietokyo</p>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="https://www.instagram.com/wansie_official/">
+                  <div className={styles.circle}><FaInstagram /></div>
+                  <p className={styles.snsBottom}>wansie_official</p>
+                </Link>
+              </li>
+            </ul>
           </div>
-          <p className={styles.playfairTitle}>sns.</p>
-          <ul className={styles.linkList}>
-            <li className={styles.linkItem}>
-              <Link href="https://www.facebook.com/wansietokyo/">
-                <div className={styles.circle}><FaFacebookF /></div>
-                <p className={styles.snsBottom}>wansietokyo</p>
-              </Link>
-            </li>
-            <li className={styles.linkItem}>
-              <Link href="https://www.instagram.com/wansie_official/">
-                <div className={styles.circle}><FaInstagram /></div>
-                <p className={styles.snsBottom}>wansie_official</p>
-              </Link>
-            </li>
-          </ul>
-        </div>
+        </AnimatedContent>
       </SpotlightCard>
     </div>
   );
