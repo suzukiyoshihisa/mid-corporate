@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ButtonLink from '@/app/_components/ButtonLink';
 
 import styles from './index.module.css';
 import Date from '../Date';
@@ -20,6 +21,9 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
       <div className={styles.titleContainer}>
         <h2 className={styles.playfairTitle}>News</h2>
         <p className={styles.subTitle}>midの最新情報をご紹介</p>
+        <div className={styles.titleFooter}>
+          <ButtonLink href="/news" variant="normal">ALL NEWS ON OUR BLOG</ButtonLink>
+        </div>
       </div>
       <ul className={styles.list}>
         {news.map((article) => (

@@ -37,6 +37,10 @@
   font-size: 18px;
 }
 
+.titleFooter {
+  padding-top: 24px;
+}
+
 .buttonBox {
   display: flex;
   justify-content: center;
