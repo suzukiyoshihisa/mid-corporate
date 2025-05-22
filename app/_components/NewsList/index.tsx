@@ -1,23 +1,22 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './index.module.css';
-// import Category from '../Category';
 import Date from '../Date';
 import { News } from '@/app/_libs/microcms';
 
 type Props = {
   news: News[];
+  layout?: 'grid' | 'block'; // ★追加
 };
 
-export default function NewsList({ news }: Props) {
+export default function NewsList({ news, layout = 'grid' }: Props) {
   if (news.length === 0) {
     return <p>記事がありません。</p>;
   }
 
   return (
-    <div className={styles.news}>
+    <div className={`${styles.news} ${layout === 'block' ? styles.block : styles.grid}`}>
       <div className={styles.titleContainer}>
         <h2 className={styles.playfairTitle}>News</h2>
         <p className={styles.subTitle}>midの最新情報をご紹介</p>
@@ -25,7 +24,7 @@ export default function NewsList({ news }: Props) {
       <ul className={styles.list}>
         {news.map((article) => (
           <li key={article.id} className={styles.item}>
-                        {article.thumbnail ? (
+            {article.thumbnail ? (
               <Image
                 className={styles.image}
                 src={article.thumbnail.url}
@@ -33,7 +32,7 @@ export default function NewsList({ news }: Props) {
                 width={article.thumbnail.width}
                 height={article.thumbnail.height}
               />
-            ) : (            
+            ) : (
               <Image
                 className={styles.image}
                 src="/no-image.png"

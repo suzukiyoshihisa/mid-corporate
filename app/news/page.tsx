@@ -12,7 +12,7 @@ export default async function Page() {
   return (
     <>
       <SearchField />
-      <NewsList news={news} />
+      <NewsList news={news} layout="block"/>
       <Pagination totalCount={totalCount}/>
     </>
   )

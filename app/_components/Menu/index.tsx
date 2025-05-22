@@ -16,16 +16,16 @@ export default function Menu() {
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           <li>
-            <Link href="">ABOUT US</Link>
+            <Link href="#about">ABOUT US</Link>
           </li>
           <li>
-            <Link href="">OUR SERVICE</Link>
+            <Link href="#service">OUR SERVICE</Link>
           </li>
           <li>
-            <Link href="">NEWS</Link>
+            <Link href="/news">NEWS</Link>
           </li>
           <li>
-            <Link href="">ADDRESS</Link>
+            <Link href="#address">ADDRESS</Link>
           </li>
           <li>
             <Link href="/contact">CONTACT</Link>
