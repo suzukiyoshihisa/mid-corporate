@@ -13,7 +13,7 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useActionState(createContactData, initialState);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = () => {
     sendGAEvent({ event: 'contact', value: 'submit' });
   };
 

@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { getNewsList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "./_constants";
+import LatestNewsText from '@/app/_components/NewsText'
 import About from "@/app/_components/About";
 import Service from "@/app/_components/Service";
 import NewsList from '@/app/_components/NewsList'
@@ -26,6 +27,9 @@ export default async function Home() {
           priority
           sizes="(max-width: 640px) 100vw, 50vw"
         />
+      </section>
+      <section className={styles.newsText}>
+        <LatestNewsText />
       </section>
       <section className={styles.about}>
         <About />
