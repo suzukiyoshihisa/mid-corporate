@@ -1,9 +1,9 @@
 import { getCategoryDetail, getNewsList } from "@/app/_libs/microcms";
 import { notFound } from "next/navigation";
-import NewsList from "@/app/_components/NewsList";
-import Pagination from "@/app/_components/Pagination";
+import NewsList from "../../../_components/NewsList";
+import Pagination from "../../../_components/Pagination";
 import Category from "../../../_components/Category";
-import { NEWS_LIST_LIMIT } from "@/app/_constants";
+import { NEWS_LIST_LIMIT } from "../../../_constants";
 
 type Props = {
   params: Promise<{
