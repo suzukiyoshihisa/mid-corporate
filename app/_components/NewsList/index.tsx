@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonLink from '@/app/_components/ButtonLink';
-import AnimatedContent from '@/app/_components/AnimatedContent';
+import ButtonLink from '../ButtonLink';
+import AnimatedContent from '../AnimatedContent';
 
 import styles from './index.module.css';
 import Date from '../Date';
-import { News } from '@/app/_libs/microcms';
+import { News } from '../../_libs/microcms';
 
 type Props = {
   news: News[];
