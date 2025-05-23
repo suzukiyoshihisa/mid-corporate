@@ -5,6 +5,11 @@ export const metadata = {
   title: 'NEWS',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 type Props = {
   children: React.ReactNode;
 };

@@ -18,8 +18,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://mid-corporate.vercel.app",
-  },
-  viewport: "width=device-width, initial-scale=1",
+  }
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
