@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from 'next/image';
 import "./GridMotion.css";
 
 type GridItem = {
@@ -42,13 +43,18 @@ const GridMotion: React.FC<GridMotionProps> = ({
     };
 
     // quickSetterの登録
-    quickSetters.current = rowRefs.current.map((row) =>
-      row ? gsap.quickSetter(row, "x", "px") : () => {}
-    );
+    quickSetters.current = rowRefs.current.map((row): ((v: number) => void) => {
+      if (row) {
+        // 明示的に型アサーション
+        return gsap.quickSetter(row, "x", "px") as (v: number) => void;
+      } else {
+        // フォールバック用ダミー関数（型を明示）
+        return (_: number) => {};
+      }
+    });
 
     const updateMotion = () => {
       const maxMove = 300;
-      const baseInertia = [0.6, 0.4, 0.3, 0.2];
 
       rowRefs.current.forEach((_, index) => {
         const direction = index % 2 === 0 ? 1 : -1;
@@ -83,7 +89,9 @@ const GridMotion: React.FC<GridMotionProps> = ({
             <div
               key={rowIndex}
               className="row"
-              ref={(el) => (rowRefs.current[rowIndex] = el)}
+              ref={(el) => {
+                rowRefs.current[rowIndex] = el;
+              }}
             >
               {Array.from({ length: 7 }, (_, itemIndex) => {
                 const content = paddedItems[rowIndex * 7 + itemIndex];
@@ -91,9 +99,11 @@ const GridMotion: React.FC<GridMotionProps> = ({
                   <div key={itemIndex} className="row__item">
                     <div className="row__item-inner" style={{ backgroundColor: "#111" }}>
                       {content.type === "image" && content.src ? (
-                        <img
+                        <Image
                           src={content.src}
                           alt={content.alt || ""}
+                          width={300}
+                          height={200}
                           loading="lazy"
                           className="row__item-img"
                         />
