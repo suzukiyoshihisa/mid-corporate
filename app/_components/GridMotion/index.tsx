@@ -49,7 +49,7 @@ const GridMotion: React.FC<GridMotionProps> = ({
         return gsap.quickSetter(row, "x", "px") as (v: number) => void;
       } else {
         // フォールバック用ダミー関数（型を明示）
-        return (_: number) => {};
+        return () => {};
       }
     });
 
