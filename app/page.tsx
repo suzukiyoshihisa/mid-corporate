@@ -20,8 +20,8 @@ export default async function Home() {
       <section className={styles.top}>
         <Image
           className={styles.bgimg}
-          src="/img-mv.jpg"
-          alt=""
+          src="/img-mv.webp"
+          alt="株式会社mid"
           width={4000}
           height={1200}
           priority
