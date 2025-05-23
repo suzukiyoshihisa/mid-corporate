@@ -25,6 +25,7 @@ const items = [
       className={styles.image}
       width={154}
       height={153}
+      loading="lazy"
     />
     <p className={styles.name}>WANSIE FLAGSHIP STORE </p>
   </div>,
@@ -38,6 +39,7 @@ const items = [
       className={styles.image}
       width={154}
       height={153}
+      loading="lazy"
     />
     <p className={styles.name}>WANSIE FLAGSHIP STORE </p>
   </div>,
@@ -76,6 +78,7 @@ export default function About() {
                 className={styles.image}
                 width={154}
                 height={153}
+                loading="lazy"
               />
             </div>
           </div>

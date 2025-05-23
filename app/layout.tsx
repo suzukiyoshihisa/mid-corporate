@@ -1,25 +1,26 @@
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import type { Metadata } from "next";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://mid-corporate.vercel.app"),
   title: {
     template: "%s | 株式会社 mid",
-    default: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣",
+    default: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
   },
+  description: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
   openGraph: {
     title: "株式会社 mid",
-    description: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣",
+    description: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
     images: ["/ogp.png"],
   },
   alternates: {
-    canonical: "http://localhost:3000",
+    canonical: "https://mid-corporate.vercel.app",
   },
   viewport: "width=device-width, initial-scale=1",
-}
+};
 
 export default function RootLayout({
   children,
@@ -28,12 +29,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head />
       <body>
         <Header />
         {children}
         <Footer />
+
+        {/* Google Analytics Script */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-5KFTZLJEMB`}
+          strategy="lazyOnload"
+        />
+        <Script id="ga-init" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5KFTZLJEMB');
+          `}
+        </Script>
       </body>
-      <GoogleAnalytics gaId="G-5KFTZLJEMB" />
     </html>
   );
 }

@@ -21,9 +21,9 @@ export default async function Home() {
         <Image
           className={styles.bgimg}
           src="/img-mv.webp"
-          alt="株式会社mid"
-          width={4000}
-          height={1200}
+          alt="株式会社mid メインビジュアル"
+          width={1600}
+          height={400}
           priority
           sizes="(max-width: 640px) 100vw, 50vw"
         />

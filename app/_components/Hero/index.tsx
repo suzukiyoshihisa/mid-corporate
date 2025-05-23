@@ -20,6 +20,7 @@ export default function Hero({ title, sub }: Props) {
         width={1200}
         height={600}
         priority
+        sizes="(max-width: 768px) 100vw, 50vw"
         style={{ width: '100%', height: 'auto' }}
       />
     </section>
