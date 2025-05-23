@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { getNewsList } from '../../_libs/microcms';
 import Date from '../Date';
-import AnimatedContent from '../AnimatedContent';
 import styles from './index.module.css';
 
 export default async function LatestNewsText() {
@@ -12,15 +11,13 @@ export default async function LatestNewsText() {
 
   return (   
     <div className={styles.wrapper}>
-      <AnimatedContent delay={100}>
-        <Link href={`/news/${latest.id}`} className={styles.link}>
-            <span className={styles.label}>NEW POST</span>
-            <span className={styles.date}>
-            <Date date={latest.publishedAt ?? latest.createdAt} />
-          </span>
-          <span className={styles.title}>{latest.title}</span>
-        </Link>
-      </AnimatedContent>
+      <Link href={`/news/${latest.id}`} className={styles.link}>
+          <span className={styles.label}>NEW POST</span>
+          <span className={styles.date}>
+          <Date date={latest.publishedAt ?? latest.createdAt} />
+        </span>
+        <span className={styles.title}>{latest.title}</span>
+      </Link>
     </div>
   );
 }

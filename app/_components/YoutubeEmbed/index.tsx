@@ -10,7 +10,7 @@ interface YoutubeEmbedProps {
 
 const YoutubeEmbed: React.FC<YoutubeEmbedProps> = ({
   videoId,
-  title = "YouTube video",
+  title = "Wansie uniform movie",
 }) => {
   const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1&rel=0&playsinline=1`;
 
@@ -20,6 +20,7 @@ const YoutubeEmbed: React.FC<YoutubeEmbedProps> = ({
         className={styles.iframe}
         src={src}
         title={title}
+        loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />

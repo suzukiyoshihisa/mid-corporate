@@ -1,15 +1,19 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import ButtonLink from '../ButtonLink';
-import AnimatedContent from '../AnimatedContent';
-
-import styles from './index.module.css';
 import Date from '../Date';
+import styles from './index.module.css';
 import { News } from '../../_libs/microcms';
+
+// 遅延読み込み化
+const AnimatedContent = dynamic(() => import('../AnimatedContent'), { ssr: false });
 
 type Props = {
   news: News[];
-  layout?: 'grid' | 'block'; // ★追加
+  layout?: 'grid' | 'block';
 };
 
 export default function NewsList({ news, layout = 'grid' }: Props) {
@@ -24,10 +28,13 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
           <h2 className={styles.playfairTitle}>News</h2>
           <p className={styles.subTitle}>midの最新情報をご紹介</p>
           <div className={styles.titleFooter}>
-            <ButtonLink href="/news" variant="normal">ALL NEWS ON OUR BLOG</ButtonLink>
+            <ButtonLink href="/news" variant="normal">
+              ALL NEWS ON OUR BLOG
+            </ButtonLink>
           </div>
         </AnimatedContent>
       </div>
+
       <ul className={styles.list}>
         <AnimatedContent delay={50}>
           {news.map((article) => (
@@ -36,9 +43,10 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
                 <Image
                   className={styles.image}
                   src={article.thumbnail.url}
-                  alt=""
+                  alt={article.title}
                   width={article.thumbnail.width}
                   height={article.thumbnail.height}
+                  loading="lazy" // 明示的に遅延読み込み指定
                 />
               ) : (
                 <Image
@@ -47,6 +55,7 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
                   alt="No Image"
                   width={1200}
                   height={630}
+                  loading="lazy"
                 />
               )}
               <Link href={`/news/${article.id}`} className={styles.link}>

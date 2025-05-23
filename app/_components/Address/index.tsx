@@ -1,19 +1,23 @@
+'use client';
+
 import styles from "./index.module.css";
-import Profile from '../Profile'
-import YoutubeEmbed from '../YoutubeEmbed';
 import Link from "next/link";
-import SpotlightCard from '../SpotlightCard';
-import AnimatedContent from '../AnimatedContent';
+import dynamic from 'next/dynamic';
+import Profile from '../Profile';
+
+// 遅延読み込み（すべてクライアント限定に）
+const AnimatedContent = dynamic(() => import('../AnimatedContent'), { ssr: false });
+const YoutubeEmbed = dynamic(() => import('../YoutubeEmbed'), { ssr: false });
 
 export default function Address() {
   return (
     <section className={styles.contents} id="address">
       <div className={styles.profile}>
-        <Profile/>
+        <Profile />
       </div>
       <div className={styles.address}>
-        <AnimatedContent delay={50}>
-          <SpotlightCard className={styles.content1}>
+        <AnimatedContent delay={150}>
+          <div className={styles.content1}>
             <div className={styles.inner}>
               <h2 className={styles.title}>Address.</h2>
               <p className={styles.text}>
@@ -21,7 +25,9 @@ export default function Address() {
                 東京都新宿区新宿5-11-25<br />
                 アソルティ新宿五丁目ビル 201<br />
                 &gt;&gt;
-                <a href="https://www.google.co.jp/maps/dir//%E3%80%92160-0022+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF%EF%BC%95%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%92%EF%BC%95/@35.6928166,139.6255896,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x60188cdc5c3ffaa9:0xb9d6b366eb54b1c!2m2!1d139.7079907!2d35.6928447?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">アクセスマップ</a>
+                <a href="https://www.google.co.jp/maps/dir//%E3%80%92160-0022+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF%EF%BC%95%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%92%EF%BC%95/...">
+                  アクセスマップ
+                </a>
               </p>
 
               <ul className={styles.list}>
@@ -39,13 +45,15 @@ export default function Address() {
                 </li>
               </ul>
             </div>
-          </SpotlightCard>
+          </div>
         </AnimatedContent>
+
         <div className={styles.content2}>
           <div className={styles.iframe}>
             <YoutubeEmbed videoId="_mJO_Kzi84o" title="Wansie uniform" />
           </div>
         </div>
+
         <div className={styles.content3}>
           <AnimatedContent delay={100}>
             <Link href="https://en-gage.net/mid-group_saiyo/?banner=1" target="_blank" className={styles.engage}></Link>
