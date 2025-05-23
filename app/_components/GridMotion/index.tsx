@@ -1,70 +1,72 @@
 "use client";
 
-import React, { useEffect, useRef, FC } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./GridMotion.css";
 
+type GridItem = {
+  type: "image" | "label";
+  src?: string;
+  alt?: string;
+  label?: string;
+};
+
 interface GridMotionProps {
-  items?: (string | React.ReactElement)[];
+  items: GridItem[];
   gradientColor?: string;
 }
 
-const GridMotion: FC<GridMotionProps> = ({
+const GridMotion: React.FC<GridMotionProps> = ({
   items = [],
   gradientColor = "black",
 }) => {
   const gridRef = useRef<HTMLDivElement>(null);
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const mouseXRef = useRef<number>(0); // SSR対応のため初期値を0に
+  const mouseXRef = useRef<number>(0);
+  const quickSetters = useRef<((v: number) => void)[]>([]);
 
   const totalItems = 28;
-  const defaultItems = Array.from(
-    { length: totalItems },
-    (_, index) => `Item ${index + 1}`
-  );
-  const combinedItems =
-    items.length > 0 ? items.slice(0, totalItems) : defaultItems;
+  const paddedItems = [...items];
+
+  // 空アイテムで埋めて常に28件
+  while (paddedItems.length < totalItems) {
+    paddedItems.push({ type: "label", label: "" });
+  }
 
   useEffect(() => {
     gsap.ticker.lagSmoothing(0);
-
-    // 初期化時に画面中央に設定
     mouseXRef.current = window.innerWidth / 2;
 
-    const handleMouseMove = (e: MouseEvent): void => {
+    const handleMouseMove = (e: MouseEvent) => {
       mouseXRef.current = e.clientX;
     };
 
-    const updateMotion = (): void => {
-      const maxMoveAmount = 300;
-      const baseDuration = 0.8;
-      const inertiaFactors = [0.6, 0.4, 0.3, 0.2];
+    // quickSetterの登録
+    quickSetters.current = rowRefs.current.map((row) =>
+      row ? gsap.quickSetter(row, "x", "px") : () => {}
+    );
 
-      rowRefs.current.forEach((row, index) => {
-        if (row) {
-          const direction = index % 2 === 0 ? 1 : -1;
-          const moveAmount =
-            ((mouseXRef.current / window.innerWidth) * maxMoveAmount -
-              maxMoveAmount / 2) *
-            direction;
+    const updateMotion = () => {
+      const maxMove = 300;
+      const baseInertia = [0.6, 0.4, 0.3, 0.2];
 
-          gsap.to(row, {
-            x: moveAmount,
-            duration:
-              baseDuration + inertiaFactors[index % inertiaFactors.length],
-            ease: "power3.out",
-            overwrite: "auto",
-          });
-        }
+      rowRefs.current.forEach((_, index) => {
+        const direction = index % 2 === 0 ? 1 : -1;
+        const moveAmount =
+          ((mouseXRef.current / window.innerWidth) * maxMove - maxMove / 2) *
+          direction;
+
+        const setter = quickSetters.current[index];
+        if (setter) setter(moveAmount);
       });
     };
 
-    const removeAnimationLoop = gsap.ticker.add(updateMotion);
+    const remove = gsap.ticker.add(updateMotion);
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      removeAnimationLoop(); // gsapのtickerから除外
+      remove();
     };
   }, []);
 
@@ -81,28 +83,24 @@ const GridMotion: FC<GridMotionProps> = ({
             <div
               key={rowIndex}
               className="row"
-              ref={(el) => {
-                rowRefs.current[rowIndex] = el;
-              }}
+              ref={(el) => (rowRefs.current[rowIndex] = el)}
             >
               {Array.from({ length: 7 }, (_, itemIndex) => {
-                const content = combinedItems[rowIndex * 7 + itemIndex];
+                const content = paddedItems[rowIndex * 7 + itemIndex];
                 return (
                   <div key={itemIndex} className="row__item">
-                    <div
-                      className="row__item-inner"
-                      style={{ backgroundColor: "#111" }}
-                    >
-                      {typeof content === "string" &&
-                      content.startsWith("http") ? (
-                        <div
+                    <div className="row__item-inner" style={{ backgroundColor: "#111" }}>
+                      {content.type === "image" && content.src ? (
+                        <img
+                          src={content.src}
+                          alt={content.alt || ""}
+                          loading="lazy"
                           className="row__item-img"
-                          style={{
-                            backgroundImage: `url(${content})`,
-                          }}
-                        ></div>
+                        />
+                      ) : content.label ? (
+                        <div className="row__item-content">{content.label}</div>
                       ) : (
-                        <div className="row__item-content">{content}</div>
+                        <div className="row__item-content">&nbsp;</div>
                       )}
                     </div>
                   </div>
