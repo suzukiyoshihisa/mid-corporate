@@ -17,7 +17,8 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "http://localhost:3000",
-  }
+  },
+  viewport: "width=device-width, initial-scale=1",
 }
 
 export default function RootLayout({
