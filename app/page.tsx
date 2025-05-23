@@ -26,6 +26,8 @@ export default async function Home() {
           height={400}
           priority
           sizes="(max-width: 640px) 100vw, 50vw"
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAoABABoJZwC7ADdF78MAAD+7N0hQB53wxKa2Gp6NJgR6TfAGrCwAXjeQAAA"
         />
       </section>
       <section className={styles.newsText}>

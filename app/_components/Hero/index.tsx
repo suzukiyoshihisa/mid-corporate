@@ -22,6 +22,8 @@ export default function Hero({ title, sub }: Props) {
         priority
         sizes="(max-width: 768px) 100vw, 50vw"
         style={{ width: '100%', height: 'auto' }}
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAoABABoJZwC7ADdF78MAAD+7N0hQB53wxKa2Gp6NJgR6TfAGrCwAXjeQAAA"
       />
     </section>
   );
