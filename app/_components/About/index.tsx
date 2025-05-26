@@ -17,18 +17,24 @@ export type GridItem = {
 };
 
 export const items: GridItem[] = [
-  { type: 'image', src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Unsplash 1' },
-  { type: 'image', src: 'https://wansie.tokyo/shared/img/collections/2025-fw/img020.jpg', alt: 'WANSIE Collection 1' },
-  { type: 'image', src: 'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-right.jpg', alt: 'Hero Right' },
-  { type: 'image', src: 'https://wansie.tokyo/shared/img/collections/2025-fw/img020.jpg', alt: 'WANSIE Collection 2' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Unsplash 2' },
-  { type: 'image', src: 'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jpg', alt: 'Hero Left' },
-  { type: 'image', src: 'https://wansie.tokyo/shared/img/shop-info/WANSIE_SHOP_ILLUST.webp', alt: 'Shop Illustration 1' },
-  { type: 'label', label: 'WANSIE FLAGSHIP STORE' },
-  { type: 'image', src: 'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jpg', alt: 'Hero Left 2' },
-  { type: 'image', src: 'https://wansie.tokyo/shared/img/shop-info/WANSIE_SHOP_ILLUST.webp', alt: 'Shop Illustration 2' },
-  { type: 'image', src: 'https://wansie.tokyo/uniform/wp/wp-content/themes/wansie/assets/img/top/hero-left.jpg', alt: 'Hero Left 3' },
-  { type: 'label', label: 'WANSIE FLAGSHIP STORE' },
+  { type: 'image', src: '/grid-wansie01.webp', alt: 'WANSIE Collection 1' },
+  { type: 'image', src: '/gird-uniform.webp', alt: 'Hero Right' },
+  { type: 'image', src: '/grid-wansie02.webp', alt: 'WANSIE Collection 2' },
+  { type: 'image', src: '/grid-shop.webp', alt: 'Unsplash 2' },
+  { type: 'image', src: '/grid-image.webp', alt: 'Hero Left' },
+  { type: 'image', src: '/grid-wansie02.webp', alt: 'Hero Left 2' },
+  { type: 'image', src: '/gird-uniform.webp', alt: 'Shop Illustration 2' },
+  { type: 'image', src: '/grid-wansie01.webp', alt: 'Hero Left 3' },
+  { type: 'image', src: '/grid-image.webp', alt: 'Unsplash 1' },
+  { type: 'image', src: '/grid-wansie02.webp', alt: 'WANSIE Collection 1' },
+  { type: 'image', src: '/gird-uniform.webp', alt: 'Hero Right' },
+  { type: 'image', src: '/grid-wansie01.webp', alt: 'WANSIE Collection 2' },
+  { type: 'image', src: '/grid-shop.webp', alt: 'Unsplash 2' },
+  { type: 'image', src: '/grid-image.webp', alt: 'Hero Left' },
+  { type: 'image', src: '/grid-shop.webp', alt: 'Shop Illustration' },
+  { type: 'image', src: '/grid-wansie02.webp', alt: 'Hero Left 2' },
+  { type: 'image', src: '/gird-uniform.webp', alt: 'Shop Illustration 2' },
+  { type: 'image', src: '/grid-wansie01.webp', alt: 'Hero Left 3' },
 ];
 
 export default function About() {
