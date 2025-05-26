@@ -27,11 +27,11 @@ export default function Service() {
               <h3 className={styles.title}>アパレル事業 1</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/wansie.png"
+                  src="/service-wansie.webp"
                   alt="wansie"
                   className={styles.image}
-                  width={256}
-                  height={144}
+                  width={330}
+                  height={215}
                   loading="lazy"
                 />
               </div>
@@ -55,11 +55,11 @@ export default function Service() {
               <h3 className={styles.title}>アパレル事業 2</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/uniform.jpg"
+                  src="/service-uniform.webp"
                   alt="wansie"
                   className={styles.image}
-                  width={256}
-                  height={144}
+                  width={330}
+                  height={215}
                   loading="lazy"
                 />
               </div>
@@ -83,11 +83,11 @@ export default function Service() {
               <h3 className={styles.title}>WEB制作事業</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/service-web.png"
+                  src="/service-web.webp"
                   alt="wansie"
                   className={styles.image}
-                  width={329}
-                  height={217}
+                  width={330}
+                  height={215}
                   loading="lazy"
                 />
               </div>
@@ -109,11 +109,11 @@ export default function Service() {
               <h3 className={styles.title}>人材派遣事業</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/staff.png"
+                  src="/service-staff.webp"
                   alt="wansie staffing"
                   className={styles.image}
-                  width={256}
-                  height={144}
+                  width={330}
+                  height={215}
                   loading="lazy"
                 />
               </div>
