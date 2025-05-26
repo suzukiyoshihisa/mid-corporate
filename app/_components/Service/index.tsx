@@ -83,11 +83,11 @@ export default function Service() {
               <h3 className={styles.title}>WEB制作事業</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/wansie.png"
+                  src="/service-web.png"
                   alt="wansie"
                   className={styles.image}
-                  width={256}
-                  height={144}
+                  width={329}
+                  height={217}
                   loading="lazy"
                 />
               </div>
