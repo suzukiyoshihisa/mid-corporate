@@ -25,14 +25,13 @@
   color: #000;
   position: relative;
   transition: 0.3s;
-  width: 84px;
   text-transform: uppercase;
 }
 
 .arrow::before {
   position: absolute;
   bottom: -4px;
-  left: -2px;
+  left: 40px;
   transition: 0.3s;
   mask-image: url(/arrow.svg);
   background: #000;
@@ -43,7 +42,7 @@
 
 .arrow:hover::before {
   bottom: -4px;
-  left: 6px;
+  left: 52px;
 }
 
 .arrow_white {
@@ -51,25 +50,24 @@
   color: #fff;
   position: relative;
   transition: 0.3s;
-  width: 84px;
   text-transform: uppercase;
 }
 
 .arrow_white::before {
   position: absolute;
   bottom: -4px;
-  left: -2px;
+  left: 40px;
   transition: 0.3s;
   mask-image: url(/arrow.svg);
   background: #fff;
-  width: 84px;
   height: 4px;
+  width: 84px;
   content: "";
 }
 
 .arrow_white:hover::before {
   bottom: -4px;
-  left: 6px;
+  left: 52px;
 }
 
 @media (max-width: 640px) {

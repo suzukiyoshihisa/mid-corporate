@@ -39,15 +39,11 @@ export default function Service() {
                 midの運営する<br />ワークウェアブランド
               </p>
               <p className={styles.itemText}>
-                WANSIE のコレクションは、
-                伝統的なワークウェアやユニフォームの「機能性」と、技術的な仕立ての技法をベースに、
-                日本のクラフトマンシップを融合させて再構築しています。
-
-                オンとオフ、仕事と趣味、多様なカルチャーが交差する現代を生きる人のために。
-                モード感と機能美を兼ね備えた、デイリーウェアを提案します。
+                伝統的なユニフォームの機能性と日本のクラフトマンシップを融合。
+                オン・オフを問わず、現代を生きる人のための機能美とモード感を備えたデイリーウェアを提案します。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://www.wansie.tokyo/" variant="arrow">more</ButtonLink>
+                <ButtonLink href="https://www.wansie.tokyo/" variant="arrow">ブランドの詳細を見る</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
@@ -71,14 +67,11 @@ export default function Service() {
                 店舗やオフィスの<br />オリジナルユニフォーム
               </p>
               <p className={styles.itemText}>
-                midがデザインから生産まで手掛けるオリジナルユニフォームは
-                店舗や企業の魅力を引き立てる、スタイル提案型のワークウェアを幅広いシーンでご提案可能です。
-
-                きめ細やかなヒアリングを通じてご要望を丁寧に形にし、OEMや小ロットでの生産にも柔軟に対応。
-                機能性とデザイン性を兼ね備えた、現場で“本当に使える”ユニフォームをご提案します。
+                デザインから生産まで一貫対応。
+                スタイル提案型ユニフォームで企業や店舗の魅力を引き出し、小ロットやOEMにも柔軟に対応します。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://wansie.tokyo/uniform/" variant="arrow">more</ButtonLink>
+                <ButtonLink href="https://wansie.tokyo/uniform/" variant="arrow">ユニフォーム事例を見る</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
@@ -100,10 +93,11 @@ export default function Service() {
               </div>
               <p className={styles.itemHeading}>企画・制作・運用を<br />オールインワン</p>
               <p className={styles.itemText}>
-                ホームページ、EC、システム開発、グラフィックデザインなどの企画制作・運用サービスにおいて...
+                ホームページ、EC、システム、グラフィックまで対応。
+                ブランディングや運営の実体験をもとに、伝わるWEB制作をサポートします。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-group.design/" variant="arrow_white">more</ButtonLink>
+                <ButtonLink href="https://mid-group.design/" variant="arrow_white">WEB制作サービスを見る</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
@@ -125,13 +119,11 @@ export default function Service() {
               </div>
               <p className={styles.itemHeading}>最適な出会いを創出する<br />人材派遣事業</p>
               <p className={styles.itemText}>
-                WEBマーケティングを活かし、各業界と人材をつなぐマッチングに強みを持つ人材サービスを展開。
-
-                WEB・アパレル・販売・イベント運営をはじめとする現場に精通したスタッフが、即戦力となる人材の確保をサポート。
-                企業ごとの課題やニーズに応じた柔軟な人材提案により、現場のクオリティとブランド体験の向上を実現します。
+                WEBと現場力を活かした即戦力マッチング。
+                アパレル・販売・イベント分野などに、柔軟かつ実務的な人材を提案します。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-group.design/" variant="arrow_white">more</ButtonLink>
+                <ButtonLink href="https://mid-group.design/" variant="arrow_white">人材派遣の詳細を見る</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
