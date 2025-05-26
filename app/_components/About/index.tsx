@@ -7,35 +7,6 @@ import styles from './index.module.css';
 
 // 遅延読み込み
 const AnimatedContent = dynamic(() => import('../AnimatedContent'), { ssr: false });
-const GridMotion = dynamic(() => import('../GridMotion'), { ssr: false });
-
-export type GridItem = {
-  type: 'image' | 'label';
-  src?: string;
-  alt?: string;
-  label?: string;
-};
-
-export const items: GridItem[] = [
-  { type: 'image', src: '/grid-wansie01.webp', alt: 'WANSIE Collection 1' },
-  { type: 'image', src: '/gird-uniform.webp', alt: 'Hero Right' },
-  { type: 'image', src: '/grid-wansie02.webp', alt: 'WANSIE Collection 2' },
-  { type: 'image', src: '/grid-shop.webp', alt: 'Unsplash 2' },
-  { type: 'image', src: '/grid-image.webp', alt: 'Hero Left' },
-  { type: 'image', src: '/grid-wansie02.webp', alt: 'Hero Left 2' },
-  { type: 'image', src: '/gird-uniform.webp', alt: 'Shop Illustration 2' },
-  { type: 'image', src: '/grid-wansie01.webp', alt: 'Hero Left 3' },
-  { type: 'image', src: '/grid-image.webp', alt: 'Unsplash 1' },
-  { type: 'image', src: '/grid-wansie02.webp', alt: 'WANSIE Collection 1' },
-  { type: 'image', src: '/gird-uniform.webp', alt: 'Hero Right' },
-  { type: 'image', src: '/grid-wansie01.webp', alt: 'WANSIE Collection 2' },
-  { type: 'image', src: '/grid-shop.webp', alt: 'Unsplash 2' },
-  { type: 'image', src: '/grid-image.webp', alt: 'Hero Left' },
-  { type: 'image', src: '/grid-shop.webp', alt: 'Shop Illustration' },
-  { type: 'image', src: '/grid-wansie02.webp', alt: 'Hero Left 2' },
-  { type: 'image', src: '/gird-uniform.webp', alt: 'Shop Illustration 2' },
-  { type: 'image', src: '/grid-wansie01.webp', alt: 'Hero Left 3' },
-];
 
 export default function About() {
   return (
@@ -58,7 +29,7 @@ export default function About() {
 
       <div className={styles.gridContainer}>
         <AnimatedContent delay={100}>
-          <GridMotion items={items} />
+          <div className={styles.aboutImg}></div>
         </AnimatedContent>
       </div>
 
