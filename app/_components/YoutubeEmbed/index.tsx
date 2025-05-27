@@ -1,40 +1,59 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import styles from "./index.module.css";
+import { useEffect, useRef, useState } from 'react';
+import styles from './index.module.css';
 
 interface YoutubeEmbedProps {
   videoId: string;
   title?: string;
 }
 
-const YoutubeEmbed: React.FC<YoutubeEmbedProps> = ({
+export default function YoutubeEmbed({
   videoId,
-  title = "Wansie uniform movie",
-}) => {
-  const [showIframe, setShowIframe] = useState(false);
+  title = 'Wansie uniform movie',
+}: YoutubeEmbedProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowIframe(true), 1000); // 1秒遅らせて読み込み
-    return () => clearTimeout(timer);
+    if (!wrapperRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // 一度だけトリガー
+        }
+      },
+      {
+        threshold: 0.5, // 50%見えたら発火
+      }
+    );
+
+    observer.observe(wrapperRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
   const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1&rel=0&playsinline=1`;
 
   return (
-    <div className={styles.wrapper}>
-      {showIframe && (
+    <div ref={wrapperRef} className={styles.wrapper}>
+      {isVisible ? (
         <iframe
           className={styles.iframe}
           src={src}
           title={title}
+          width="560"
+          height="315"
+          frameBorder="0"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
+      ) : (
+        <div className={styles.placeholder}>動画を読み込み中...</div>
       )}
     </div>
   );
-};
-
-export default YoutubeEmbed;
+}
