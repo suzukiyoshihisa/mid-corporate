@@ -51,7 +51,7 @@ export default function About() {
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="https://www.facebook.com/wansietokyo/">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24" className={styles.facebook}>
                   <path d="M22.675 0h-21.35C.597 0 .003.594.003 1.326v21.348C.003 23.406.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.127c.728 0 1.322-.594 1.322-1.326V1.326C24 .594 23.406 0 22.675 0z" />
                 </svg>
                 <p className={styles.snsBottom}>wansietokyo</p>

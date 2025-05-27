@@ -111,6 +111,10 @@
   text-transform: uppercase;
 }
 
+.facebook {
+  padding: 5px;
+}
+
 @media (any-hover: hover) {
   .circle:hover {
     color: #1b1d1f;
