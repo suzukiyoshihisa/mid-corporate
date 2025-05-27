@@ -18,7 +18,7 @@
 }
 
 .parallax {
-  background: url(/service-img.jpg) no-repeat;
+  background: url(/service-img.webp) no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;

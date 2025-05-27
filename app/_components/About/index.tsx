@@ -38,7 +38,7 @@ export default function About() {
           <div className={styles.snsTop}>
             <div className={styles.snsTopImg}>
               <Image
-                src="/about__sns-top.png"
+                src="/about__sns-top.webp"
                 alt="SNS Top Image"
                 className={styles.image}
                 width={154}

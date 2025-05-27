@@ -39,7 +39,7 @@
 }
 
 .engage {
-  background: url(https://en-gage.net/imageFile_new/company/widget_banner_C_pc_728×90.png) no-repeat;
+  background: url(/engage_pc.webp) no-repeat;
   background-size: cover;
   display: flex;
   height: 100px;
