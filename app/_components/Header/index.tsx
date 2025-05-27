@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './index.module.css';
@@ -13,7 +15,7 @@ export default function Header() {
           className={styles.logo}
           width={348}
           height={133}
-          priority
+          // priority
         />
       </Link>
       <Menu />

@@ -3,6 +3,14 @@ import Script from "next/script";
 import type { Metadata } from "next";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import { Noto_Sans_JP } from 'next/font/google';
+
+const notoSans = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mid-corporate.vercel.app"),
@@ -32,27 +40,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <head />
-      <body>
-        <Header />
-        {children}
-        <Footer />
+    <html lang="ja" className={notoSans.className}><head /><body>
+      <Header />
+      {children}
+      <Footer />
 
-        {/* Google Analytics Script */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-5KFTZLJEMB`}
-          strategy="lazyOnload"
-        />
-        <Script id="ga-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5KFTZLJEMB');
-          `}
-        </Script>
-      </body>
-    </html>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-5KFTZLJEMB"
+        strategy="lazyOnload"
+      />
+      <Script id="ga-init" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-5KFTZLJEMB');
+        `}
+      </Script>
+    </body></html>
   );
 }

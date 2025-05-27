@@ -37,7 +37,6 @@ export default function Menu() {
             alt="閉じる"
             width={24}
             height={24}
-            priority
           />
         </button>
       </nav>

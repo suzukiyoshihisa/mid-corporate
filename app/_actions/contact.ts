@@ -5,6 +5,11 @@ function validateEmail(email: string) {
   return pattern.test(email);
 }
 
+type ContactFormState = {
+  status: 'success' | 'error' | '';
+  message: string;
+};
+
 export async function createContactData(_prevState: unknown, formData: FormData) {
   // formのname属性ごとにformData.get()で値を取り出すことができる
   const rawFormData = {
@@ -78,6 +83,13 @@ export async function createContactData(_prevState: unknown, formData: FormData)
       }),
     }
   );
+
+  if (!result.ok) {
+    return {
+      status: "error",
+      message: "サーバー側で問題が発生しました",
+    };
+  }
 
   try {
     await result.json();

@@ -1,3 +1,5 @@
+'use client';
+
 import ContactForm from '../ContactForm/index';
 import styles from './index.module.css';
 

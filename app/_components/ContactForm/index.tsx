@@ -2,7 +2,7 @@
 
 import { sendGAEvent } from '@next/third-parties/google';
 import { createContactData } from '../../_actions/contact';
-import { useActionState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import styles from './index.module.css';
 
 const initialState = {
@@ -16,6 +16,13 @@ export default function ContactForm() {
   const handleSubmit = () => {
     sendGAEvent({ event: 'contact', value: 'submit' });
   };
+
+  // ✅ Hydration対策
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  if (!isMounted) return null;
 
   if (state.status === 'success') {
     return (
