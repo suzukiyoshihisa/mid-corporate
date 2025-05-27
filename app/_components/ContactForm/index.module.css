@@ -46,9 +46,14 @@
   background-color: var(--color-button-primary);
   padding: 16px 40px;
   font-size: 16px;
-  border-radius: 4px;
   color: var(--color-text-unpainted);
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-text-unpainted);
+  color: var(--color-button-primary);
+  transition: 0.3s;
 }
 
 .success {
