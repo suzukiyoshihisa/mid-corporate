@@ -123,7 +123,7 @@ export default function Service() {
                 アパレル・販売・イベント分野などに、柔軟かつ実務的な人材を提案します。
               </p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-group.design/" variant="arrow_white">人材派遣の詳細を見る</ButtonLink>
+                <ButtonLink href="https://mid-staffing.studio.site/" variant="arrow_white">人材派遣の詳細を見る</ButtonLink>
               </div>
             </div>
           </AnimatedContent>
