@@ -24,6 +24,22 @@
   text-align: center;
 }
 
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-en-gage {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
 .playfairTitle {
   font-size: clamp(33.3px, 3.4722222222vw, 50px); 
 }

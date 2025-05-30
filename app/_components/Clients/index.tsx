@@ -31,7 +31,7 @@ export default function Clients() {
       <div className={styles.client}>
         <ClientsList/>
       </div>
-      <div className={styles.text}>
+      <div className={styles.banner}>
         <a href="https://en-gage.net/mid-group_saiyo/?banner=1" target="_blank">
           <Image 
             src="/en.webp"
