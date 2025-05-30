@@ -66,7 +66,7 @@ export default function Footer() {
           <p>©️ 2025 mid</p>
         </div>
         <div className={styles.navItem}>
-          <a href="/handling">個人情報保護方針</a>
+          <a href="/privacy">個人情報保護方針</a>
         </div>
         <div className={styles.navItem}>
           <a href="/handling">個人情報の取り扱いについて</a>
