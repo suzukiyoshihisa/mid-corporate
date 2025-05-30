@@ -1,5 +1,6 @@
 
 'use client'
+import Image from 'next/image';
 import CountUp from '../CountUp';
 import ClientsList from '../ClientsList';
 import styles from './index.module.css';
@@ -29,6 +30,17 @@ export default function Clients() {
       </div>
       <div className={styles.client}>
         <ClientsList/>
+      </div>
+      <div className={styles.text}>
+        <a href="https://en-gage.net/mid-group_saiyo/?banner=1" target="_blank">
+          <Image 
+            src="/en.webp"
+            alt="engage"
+            width={300}
+            height={250}
+            className='image-en-gage'
+            />
+        </a> 
       </div>
     </div>
   );
