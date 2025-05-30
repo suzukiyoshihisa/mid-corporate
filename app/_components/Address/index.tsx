@@ -1,7 +1,6 @@
 'use client';
 
 import styles from "./index.module.css";
-import Link from "next/link";
 import dynamic from 'next/dynamic';
 import Profile from '../Profile';
 
@@ -15,7 +14,7 @@ export default function Address() {
       <div className={styles.profile}>
         <Profile />
       </div>
-      <div className={styles.address}>
+      <div className={styles.content}>
         <AnimatedContent delay={150}>
           <div className={styles.content1}>
             <div className={styles.inner}>
@@ -32,13 +31,13 @@ export default function Address() {
 
               <ul className={styles.list}>
                 <li className={styles.item}>
-                  [MAIL] <a href="mailto:info@mid-group.co">info@mid-group.co</a>
+                  [MAIL] info@mid-group.co
                 </li>
                 <li className={styles.item}>
-                  [URL] <a href="https://mid-group.co/">www.mid-group.co</a>
+                  [URL] https://mid-group.co/
                 </li>
                 <li className={styles.item}>
-                  [TEL] <a href="tel:03-6869-7785">03-6869-7785</a>
+                  [TEL] 03-6869-7785
                 </li>
                 <li className={styles.item}>
                   [FAX] 03-6730-2693
@@ -47,17 +46,10 @@ export default function Address() {
             </div>
           </div>
         </AnimatedContent>
-
-        <div className={styles.content2}>
-          <div className={styles.iframe}>
-            <YoutubeEmbed videoId="_mJO_Kzi84o" title="Wansie uniform" />
-          </div>
-        </div>
-
-        <div className={styles.content3}>
-          <AnimatedContent delay={100}>
-            <Link href="https://en-gage.net/mid-group_saiyo/?banner=1" target="_blank" className={styles.engage}></Link>
-          </AnimatedContent>
+      </div>
+      <div className={styles.content}>
+        <div className={styles.iframe}>
+          <YoutubeEmbed videoId="_mJO_Kzi84o" title="Wansie uniform" />
         </div>
       </div>
     </section>
