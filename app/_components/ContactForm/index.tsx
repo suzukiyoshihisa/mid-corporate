@@ -4,6 +4,7 @@ import { sendGAEvent } from '@next/third-parties/google';
 import { createContactData } from '../../_actions/contact';
 import { useActionState, useEffect, useState } from 'react';
 import styles from './index.module.css';
+import Link from 'next/link';
 
 const initialState = {
   status: '',
@@ -44,7 +45,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="name">
-          お名前
+          お名前<span style={{ color: 'red' }}>*</span>
         </label>
         <input
           className={styles.textfield}
@@ -57,7 +58,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="company">
-          会社名
+          会社名<span style={{ color: 'red' }}>*</span>
         </label>
         <input
           className={styles.textfield}
@@ -70,7 +71,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="email">
-          メールアドレス
+          メールアドレス<span style={{ color: 'red' }}>*</span>
         </label>
         <input
           className={styles.textfield}
@@ -83,7 +84,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="message">
-          メッセージ
+          メッセージ<span style={{ color: 'red' }}>*</span>
         </label>
         <textarea
           className={styles.textarea}
@@ -91,6 +92,21 @@ export default function ContactForm() {
           name="message"
           placeholder="(例) サービスについてのご質問など"
         />
+      </div>
+
+      <div className={styles.item}>
+        <label className={styles.checkboxLabel}>
+          <input
+            type="checkbox"
+            id='handling'
+            name="handling"
+          />
+          &emsp;
+          <Link href="/handling" className={styles.link}>
+            個人情報の取扱い
+          </Link>
+            に同意する<span style={{ color: 'red' }}>*</span>
+        </label>
       </div>
 
       <div className={styles.actions}>

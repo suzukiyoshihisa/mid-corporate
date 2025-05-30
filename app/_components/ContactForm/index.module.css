@@ -41,6 +41,14 @@
   margin-top: 40px;
 }
 
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--color-text-unpainted);
+}
+
 .button {
   border: none;
   background-color: var(--color-button-primary);

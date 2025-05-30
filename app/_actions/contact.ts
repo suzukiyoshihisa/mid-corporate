@@ -12,6 +12,7 @@ export async function createContactData(_prevState: unknown, formData: FormData)
     company: formData.get("company") as string,
     email: formData.get("email") as string,
     message: formData.get("message") as string,
+    handling: formData.get("handling") as string | null,
   };
 
   if (!rawFormData.name) {
@@ -42,6 +43,13 @@ export async function createContactData(_prevState: unknown, formData: FormData)
     return {
       status: "error",
       message: "メッセージを入力してください",
+    };
+  }
+
+  if (rawFormData.handling !== "on") {
+    return {
+      status: "error",
+      message: "個人情報の取扱いに同意してください",
     };
   }
 
