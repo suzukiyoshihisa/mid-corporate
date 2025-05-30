@@ -32,10 +32,6 @@
   z-index: -1;
 }
 
-.information {
-  display: flex;
-}
-
 @media (max-width: 640px) {
   .title {
     font-size: 2rem;
