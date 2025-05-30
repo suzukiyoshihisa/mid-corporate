@@ -12,11 +12,11 @@ export default async function LatestNewsText() {
   return (   
     <div className={styles.wrapper}>
       <Link href={`/news/${latest.id}`} className={styles.link}>
-          <span className={styles.label}>NEW POST</span>
-          <span className={styles.date}>
-          <Date date={latest.publishedAt ?? latest.createdAt} />
-        </span>
-        <span className={styles.title}>{latest.title}</span>
+        <div className={styles.label}>NEW POST</div>
+        <div className={styles.postData}>
+          <div className={styles.date}><Date date={latest.publishedAt ?? latest.createdAt} /></div>
+          <div className={styles.title}>{latest.title}</div>
+        </div>
       </Link>
     </div>
   );

@@ -4,3 +4,10 @@
   gap: 2px;
   margin: 0.8rem 0;
 }
+
+@media (max-width: 640px) {
+  .date {
+    margin: 0;
+    gap: 0;
+  }
+}
