@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   background-color: #1b1d1f;
-  color: #fff;
+  color: var(--color-text-unpainted);
 }
 
 .inner {

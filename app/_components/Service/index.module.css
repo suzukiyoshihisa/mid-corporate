@@ -26,7 +26,7 @@
 
 .playfairTitle {
   font-family: "Playfair Display", serif;
-  color: #ffffff;
+  color: var(--color-text-unpainted);
   font-size: 50px;
   font-weight: 600;
   text-align: center;
@@ -35,7 +35,7 @@
 }
 
 .subTitle {
-  color: #ffffff;
+  color: var(--color-text-unpainted);
   font-size: 18px;
   line-height: 1.75;
 }
@@ -79,16 +79,16 @@
 /* 3つ目のアイテムだけスタイル変更 */
 .special {
   background: var(--color-bg-main);
-  color: #ffffff;
+  color: var(--color-text-unpainted);
 }
 
 .special .title {
-  color: #ffffff;
+  color: var(--color-text-unpainted);
   border-bottom: 0.8px solid #ffffff;
 }
 
 .special .itemText {
-  color: #ffffff;
+  color: var(--color-text-unpainted);
 }
 
 @media screen and (max-width: 960px) {

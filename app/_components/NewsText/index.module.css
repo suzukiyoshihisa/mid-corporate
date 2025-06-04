@@ -22,14 +22,14 @@
 
 .label {
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color-text-unpainted);
   border: 1px solid #ffffff;
   padding: 3px 7px;
 }
 
 .date {
   font-size: 0.85rem;
-  color: #ffffff;
+  color: var(--color-text-unpainted);
 }
 
 .date img {
@@ -42,7 +42,7 @@
   flex-shrink: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #ffffff;
+  color: var(--color-text-unpainted);
 }
 
 @media (max-width: 640px) {

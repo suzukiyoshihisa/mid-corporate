@@ -1,6 +1,6 @@
 .items {
   display: flex;
-  color: #fff;
+  color: var(--color-text-unpainted);
   gap: 40px;
 }
 

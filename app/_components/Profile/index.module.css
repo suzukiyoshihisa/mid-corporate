@@ -2,7 +2,7 @@
 	background: url(/profile-img.webp) no-repeat;
 	background-size: cover;
 	background-position: center;
-  color: #ffffff;
+  color: var(--color-text-unpainted);
   line-height: 1.75;
 	height: 100%;
 	  padding-top: 50px;
@@ -22,7 +22,7 @@
 
 .text {
   margin-top: 18px;
-	text-shadow: 1px 1px 1px #000;
+	text-shadow: 1px 1px 1px var(--color-text-main);
 	font-size: 14px;
 }
 

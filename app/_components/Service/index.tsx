@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import styles from "./index.module.css";
 import ButtonLink from "../ButtonLink";
 
-// 遅延読み込みで初期負荷を軽減
 const AnimatedContent = dynamic(() => import("../AnimatedContent"), { ssr: false });
 
 export default function Service() {

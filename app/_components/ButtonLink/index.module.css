@@ -22,7 +22,7 @@
 
 .arrow {
   display: block;
-  color: #000;
+  color: var(--color-text-main);
   position: relative;
   transition: 0.3s;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
   left: 40px;
   transition: 0.3s;
   mask-image: url(/arrow.svg);
-  background: #000;
+  background: var(--color-text-main);
   width: 84px;
   height: 4px;
   content: "";
@@ -47,7 +47,7 @@
 
 .arrow_white {
   display: block;
-  color: #fff;
+  color: var(--color-text-unpainted);
   position: relative;
   transition: 0.3s;
   text-transform: uppercase;
@@ -71,14 +71,14 @@
 }
 
 .outline_black {
-  color: #000;
+  color: var(--color-text-main);
   border: 1px solid #000;
   padding: 10px 20px;
   font-weight: normal;
 }
 
 .outline_black:hover {
-  color: #fff;
+  color: var(--color-text-unpainted);
   background: #000;
 }
 
@@ -98,7 +98,7 @@
   }
 
   .arrow_white {
-    color: #000;
+    color: var(--color-text-unpainted);
     width: 100%;
     border: 1px solid #000;
   }
