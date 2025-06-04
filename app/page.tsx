@@ -29,6 +29,17 @@ export default async function Home() {
           placeholder="blur"
           blurDataURL="data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAoABABoJZwC7ADdF78MAAD+7N0hQB53wxKa2Gp6NJgR6TfAGrCwAXjeQAAA"
         />
+        <Image
+          className={styles.bgimgSp}
+          src="/img-mv-sp.webp"
+          alt="企業ビルの外観SP"
+          width={600}
+          height={1200}
+          priority
+          style={{ width: '100%', height: 'auto' }}
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAoABABoJZwC7ADdF78MAAD+7N0hQB53wxKa2Gp6NJgR6TfAGrCwAXjeQAAA"
+        />
       </section>
       <section className={styles.newsText}>
         <LatestNewsText />
