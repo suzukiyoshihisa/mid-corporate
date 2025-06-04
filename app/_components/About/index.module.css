@@ -7,7 +7,7 @@
 
 .container {
   padding: 50px;
-  background: #1583d1;
+  background: var(--color-bg-main);
 }
 
 .textContainer {

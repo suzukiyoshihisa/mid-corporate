@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #1583d1;
+  background: var(--color-bg-main);
   color: #ffffff;
   font-size: 50px;
   font-weight: 600;
