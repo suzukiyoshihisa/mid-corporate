@@ -6,6 +6,10 @@ function validateEmail(email: string) {
 }
 
 export async function createContactData(_prevState: unknown, formData: FormData) {
+    // ✅ 一時的に環境変数の確認ログを出力
+    console.log("HUBSPOT_PORTAL_ID:", process.env.HUBSPOT_PORTAL_ID);
+    console.log("HUBSPOT_FORM_ID:", process.env.HUBSPOT_FORM_ID);
+
   // formのname属性ごとにformData.get()で値を取り出すことができる
   const rawFormData = {
     name: formData.get("name") as string,
