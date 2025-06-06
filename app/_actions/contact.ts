@@ -14,7 +14,7 @@ export async function createContactData(_prevState: unknown, formData: FormData)
     handling: formData.get("handling") as string | null,
   };
 
-  // ✅ フォームバリデーション
+  // フォームバリデーション
   if (!rawFormData.name) return { status: "error", message: "お名前を入力してください" };
   if (!rawFormData.company) return { status: "error", message: "会社名を入力してください" };
   if (!rawFormData.email) return { status: "error", message: "メールアドレスを入力してください" };
@@ -40,23 +40,24 @@ export async function createContactData(_prevState: unknown, formData: FormData)
       body: JSON.stringify(payload),
     });
 
+    const rawResponse = await result.text(); // ← JSONでなく textで取得
+
     if (!result.ok) {
-      const errorDetails = await result.json(); // 👈 エラー詳細の取得
-      console.error("HubSpotエラー詳細:", errorDetails); // 👈 ログ出力
+      console.error("❌ HubSpotエラー（非200）:", rawResponse); // ← ここで原因が必ずわかる
       return {
         status: "error",
-        message: "送信に失敗しました",
+        message: "サーバー側で問題が発生しました",
       };
     }
 
-    await result.json(); // 正常時のレスポンス処理（必要ならここで使う）
-
+    console.log("✅ HubSpot正常応答:", rawResponse);
     return {
       status: "success",
       message: "OK",
     };
+
   } catch (e) {
-    console.error("送信時の例外:", e); // 👈 ネットワークエラー等のログ
+    console.error("❌ HubSpot送信時の例外:", e);
     return {
       status: "error",
       message: "サーバーエラーが発生しました",
