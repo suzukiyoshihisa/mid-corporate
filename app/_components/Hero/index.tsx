@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from './index.module.css';
-import { s } from 'framer-motion/client';
 
 type Props = {
   title: string;
