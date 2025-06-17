@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mid-corporate.vercel.app"),
   title: {
     template: "%s | 株式会社 mid",
-    default: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
+    default: "株式会社midはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
   },
-  description: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
+  description: "株式会社midはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
   openGraph: {
     title: "株式会社 mid",
-    description: "株式会社ミッドはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
+    description: "株式会社midはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
     images: ["/ogp.png"],
   },
   alternates: {
