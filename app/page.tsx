@@ -33,9 +33,10 @@ export default async function Home() {
           className={styles.bgimgSp}
           src="/img-mv-sp.webp"
           alt="企業ビルの外観SP"
-          width={600}
-          height={1200}
+          width={800}
+          height={1066}
           priority
+          sizes="(max-width: 768px) 100vw, 800px"
           style={{ width: '100%', height: 'auto' }}
           placeholder="blur"
           blurDataURL="data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoKAAoABABoJZwC7ADdF78MAAD+7N0hQB53wxKa2Gp6NJgR6TfAGrCwAXjeQAAA"
