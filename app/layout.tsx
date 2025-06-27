@@ -46,7 +46,7 @@ export default function RootLayout({
       <Footer />
 
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-5KFTZLJEMB"
+        src="https://www.googletagmanager.com/gtag/js?id=G-XLM4RBCR3P"
         strategy="lazyOnload"
       />
       <Script id="ga-init" strategy="lazyOnload">
@@ -54,7 +54,7 @@ export default function RootLayout({
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-5KFTZLJEMB');
+          gtag('config', 'G-XLM4RBCR3P');
         `}
       </Script>
     </body></html>

@@ -15,7 +15,7 @@ export default function RootLayout({ children }: Props) {
     <>
       <Hero title="Privacy Policy" sub="個人情報保護方針" />
       <Sheet>{children}</Sheet>
-      <GoogleAnalytics gaId="G-XXX" />
+      <GoogleAnalytics gaId="G-CEZ1PKDJPS" />
     </>
   );
 }
