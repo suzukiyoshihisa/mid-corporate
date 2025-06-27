@@ -31,6 +31,7 @@ export default function Hero({ title, sub }: Props) {
         alt="企業ビルの外観SP"
         width={800}
         height={1066}
+        quality={65}
         priority
         sizes="(max-width: 768px) 100vw, 800px"
         style={{ width: '100%', height: 'auto' }}
