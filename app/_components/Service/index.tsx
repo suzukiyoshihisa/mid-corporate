@@ -23,7 +23,7 @@ export default function Service() {
         <div className={styles.div2}>
           <AnimatedContent delay={50}>
             <div className={styles.item}>
-              <h3 className={styles.title}>アパレル事業 1</h3>
+              <h3 className={styles.title}>WANSIE</h3>
               <div className={styles.itemImg}>
                 <Image
                   src="/service-wansie.webp"
@@ -51,7 +51,7 @@ export default function Service() {
         <div className={styles.div3}>
           <AnimatedContent delay={100}>
             <div className={styles.item}>
-              <h3 className={styles.title}>アパレル事業 2</h3>
+              <h3 className={styles.title}>WANSIE UNIFORM</h3>
               <div className={styles.itemImg}>
                 <Image
                   src="/service-uniform.webp"
@@ -79,7 +79,7 @@ export default function Service() {
         <div className={`${styles.div4} ${styles.special}`}>
           <AnimatedContent delay={150}>
             <div className={`${styles.item} ${styles.specialItem}`}>
-              <h3 className={styles.title}>WEB制作事業</h3>
+              <h3 className={styles.title}>WANSIE DESIGN</h3>
               <div className={styles.itemImg}>
                 <Image
                   src="/service-web.webp"
@@ -105,7 +105,7 @@ export default function Service() {
         <div className={`${styles.div5} ${styles.special}`}>
           <AnimatedContent delay={200}>
             <div className={`${styles.item} ${styles.specialItem}`}>
-              <h3 className={styles.title}>人材派遣事業</h3>
+              <h3 className={styles.title}>mid staffing</h3>
               <div className={styles.itemImg}>
                 <Image
                   src="/service-staff.webp"
