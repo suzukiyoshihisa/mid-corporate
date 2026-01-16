@@ -67,10 +67,10 @@ export default function Footer() {
           <p>©️ 2025 mid</p>
         </div>
         <div className={styles.navItem}>
-          <Link href="/news/s5qhekpbzrl/">個人情報保護方針</Link>
+          <Link href="/news/privacy">個人情報保護方針</Link>
         </div>
         <div className={styles.navItem}>
-          <Link href="/news/en46y027e3l/">個人情報の取り扱いについて</Link>
+          <Link href="/news/handling">個人情報の取り扱いについて</Link>
         </div>
       </nav>
     </footer>
