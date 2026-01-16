@@ -2,6 +2,7 @@
 
 import ContactForm from '../ContactForm/index';
 import styles from './index.module.css';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -66,10 +67,10 @@ export default function Footer() {
           <p>©️ 2025 mid</p>
         </div>
         <div className={styles.navItem}>
-          <a href="/news/s5qhekpbzrl">個人情報保護方針</a>
+          <Link href="/news/s5qhekpbzrl/">個人情報保護方針</Link>
         </div>
         <div className={styles.navItem}>
-          <a href="/news/en46y027e3l">個人情報の取り扱いについて</a>
+          <Link href="/news/en46y027e3l/">個人情報の取り扱いについて</Link>
         </div>
       </nav>
     </footer>
