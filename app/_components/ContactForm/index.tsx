@@ -102,7 +102,7 @@ export default function ContactForm() {
             name="handling"
           />
           &emsp;
-          <Link href="/handling" className={styles.link}>
+          <Link href="/news/en46y027e3l" className={styles.link}>
             個人情報の取扱い
           </Link>
             に同意する<span style={{ color: 'red' }}>*</span>
