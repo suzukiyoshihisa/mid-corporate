@@ -12,7 +12,7 @@
 
 .title {
   font-size: 50px;
-  font-family: Playfair Display, serif;
+  font-family: var(--font-display);
 }
 
 .text {

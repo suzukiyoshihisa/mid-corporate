@@ -3,13 +3,21 @@ import Script from "next/script";
 import type { Metadata } from "next";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-import { Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_JP, Playfair_Display } from 'next/font/google';
 
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['400', '700'],
   display: 'swap',
   variable: '--font-noto',
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['600'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-playfair',
 });
 
 
@@ -41,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={notoSans.variable}><head /><body>
+    <html lang="ja" className={`${notoSans.variable} ${playfairDisplay.variable}`}><head /><body>
       <Header />
       {children}
       <Footer />

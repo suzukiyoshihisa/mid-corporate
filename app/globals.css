@@ -1,5 +1,6 @@
 :root {
   --font-sans: var(--font-noto), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-display: var(--font-playfair), serif;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
