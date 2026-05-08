@@ -6,7 +6,11 @@ import { useState } from 'react';
 import cx from 'classnames';
 import styles from './index.module.css';
 
-export default function Menu() {
+type Props = {
+  scrolled?: boolean;
+};
+
+export default function Menu({ scrolled }: Props) {
   const [isOpen, setOpen] = useState<boolean>(false);
   const open = () => setOpen(true);
   const close = () => setOpen(false);
@@ -14,7 +18,7 @@ export default function Menu() {
   return (
     <div>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
-        <ul className={styles.items}>
+        <ul className={cx(styles.items, scrolled && styles.itemsScrolled)}>
           <li>
             <Link href="/#about" onClick={close}>ABOUT US</Link>
           </li>

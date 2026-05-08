@@ -21,12 +21,12 @@ export default function Header() {
         <Image
           src="/logo.png"
           alt="mid logo"
-          className={styles.logo}
+          className={`${styles.logo} ${scrolled ? styles.logoDark : ''}`}
           width={348}
           height={133}
         />
       </Link>
-      <Menu />
+      <Menu scrolled={scrolled} />
     </header>
   );
 }

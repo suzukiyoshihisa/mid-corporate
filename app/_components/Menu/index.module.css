@@ -2,6 +2,11 @@
   display: flex;
   color: var(--color-text-unpainted);
   gap: 40px;
+  transition: color 0.3s ease;
+}
+
+.itemsScrolled {
+  color: var(--color-text-main);
 }
 
 .button {
