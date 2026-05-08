@@ -70,6 +70,10 @@
   border-radius: var(--border-radius);
 }
 
+.required {
+  color: red;
+}
+
 .error {
   color: var(--color-text-error);
   font-size: 14px;

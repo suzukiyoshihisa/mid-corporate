@@ -1,11 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import styles from "./index.module.css";
 import ButtonLink from "../ButtonLink";
-
-const AnimatedContent = dynamic(() => import("../AnimatedContent"), { ssr: false });
+import AnimatedContent from "../AnimatedContent";
+import { IMAGE_SIZES } from "../../_constants/config";
 
 export default function Service() {
   return (
@@ -29,8 +28,8 @@ export default function Service() {
                   src="/service-wansie.webp"
                   alt="wansie"
                   className={styles.image}
-                  width={330}
-                  height={215}
+                  width={IMAGE_SIZES.SERVICE_ITEM.width}
+                  height={IMAGE_SIZES.SERVICE_ITEM.height}
                   loading="lazy"
                 />
               </div>
@@ -57,8 +56,8 @@ export default function Service() {
                   src="/service-uniform.webp"
                   alt="wansie"
                   className={styles.image}
-                  width={330}
-                  height={215}
+                  width={IMAGE_SIZES.SERVICE_ITEM.width}
+                  height={IMAGE_SIZES.SERVICE_ITEM.height}
                   loading="lazy"
                 />
               </div>
@@ -85,8 +84,8 @@ export default function Service() {
                   src="/service-web.webp"
                   alt="wansie"
                   className={styles.image}
-                  width={330}
-                  height={215}
+                  width={IMAGE_SIZES.SERVICE_ITEM.width}
+                  height={IMAGE_SIZES.SERVICE_ITEM.height}
                   loading="lazy"
                 />
               </div>
@@ -111,8 +110,8 @@ export default function Service() {
                   src="/service-staff.webp"
                   alt="wansie staffing"
                   className={styles.image}
-                  width={330}
-                  height={215}
+                  width={IMAGE_SIZES.SERVICE_ITEM.width}
+                  height={IMAGE_SIZES.SERVICE_ITEM.height}
                   loading="lazy"
                 />
               </div>

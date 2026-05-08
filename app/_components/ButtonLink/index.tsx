@@ -1,9 +1,10 @@
 import styles from './index.module.css';
+import type { ButtonVariant } from '../../_types';
 
 type Props = {
   href: string;
   children: React.ReactNode;
-  variant?: 'normal' | 'arrow' | 'arrow_white' | 'outline' | 'outline_black'; // デザインの種類
+  variant?: ButtonVariant;
 };
 
 export default function ButtonLink({ href, children, variant = 'normal' }: Props) {

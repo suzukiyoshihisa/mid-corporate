@@ -2,14 +2,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import ButtonLink from '../ButtonLink';
 import Date from '../Date';
 import styles from './index.module.css';
+import AnimatedContent from '../AnimatedContent';
 import { News } from '../../_libs/microcms';
-
-// 遅延読み込み化
-const AnimatedContent = dynamic(() => import('../AnimatedContent'), { ssr: false });
+import { IMAGE_SIZES } from '../../_constants/config';
 
 type Props = {
   news: News[];
@@ -46,15 +44,15 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
                   alt={article.title}
                   width={article.thumbnail.width}
                   height={article.thumbnail.height}
-                  loading="lazy" // 明示的に遅延読み込み指定
+                  loading="lazy"
                 />
               ) : (
                 <Image
                   className={styles.image}
                   src="/no-image.png"
                   alt="No Image"
-                  width={1200}
-                  height={630}
+                  width={IMAGE_SIZES.NO_IMAGE.width}
+                  height={IMAGE_SIZES.NO_IMAGE.height}
                   loading="lazy"
                 />
               )}

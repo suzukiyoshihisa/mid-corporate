@@ -1,11 +1,13 @@
 "use server";
 
+import type { ContactFormState } from '../_types';
+
 function validateEmail(email: string) {
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(email);
 }
 
-export async function createContactData(_prevState: unknown, formData: FormData) {
+export async function createContactData(_prevState: ContactFormState, formData: FormData): Promise<ContactFormState> {
   const rawFormData = {
     name: formData.get("name") as string,
     company: formData.get("company") as string,
@@ -40,27 +42,18 @@ export async function createContactData(_prevState: unknown, formData: FormData)
       body: JSON.stringify(payload),
     });
 
-    const rawResponse = await result.text(); // ← JSONでなく textで取得
+    const rawResponse = await result.text();
 
     if (!result.ok) {
-      console.error("❌ HubSpotエラー（非200）:", rawResponse); // ← ここで原因が必ずわかる
-      return {
-        status: "error",
-        message: "サーバー側で問題が発生しました",
-      };
+      console.error("❌ HubSpotエラー（非200）:", rawResponse);
+      return { status: "error", message: "サーバー側で問題が発生しました" };
     }
 
     console.log("✅ HubSpot正常応答:", rawResponse);
-    return {
-      status: "success",
-      message: "OK",
-    };
+    return { status: "success", message: "OK" };
 
   } catch (e) {
     console.error("❌ HubSpot送信時の例外:", e);
-    return {
-      status: "error",
-      message: "サーバーエラーが発生しました",
-    };
+    return { status: "error", message: "サーバーエラーが発生しました" };
   }
 }

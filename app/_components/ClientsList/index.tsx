@@ -1,141 +1,38 @@
-import React from 'react'
 import styles from './index.module.css';
 import Image from 'next/image';
+import { IMAGE_SIZES } from '../../_constants/config';
+
+const clients = [
+  { src: '/gategourmet.gif', alt: 'Gate Gourmet' },
+  { src: '/hoshino.gif', alt: '星野リゾート | リゾナーレ八ヶ岳' },
+  { src: '/irobot.gif', alt: 'iRobot' },
+  { src: '/sony.gif', alt: 'sony' },
+  { src: '/lush.jpg', alt: 'Lush Fresh Handmade Cosmetics' },
+  { src: '/unico.gif', alt: 'unico' },
+  { src: '/sg.gif', alt: 'Stage Group' },
+  { src: '/seiloo.gif', alt: 'relativ' },
+  { src: '/unic.gif', alt: 'Unic' },
+  { src: '/deiberica.gif', alt: 'Deiberica' },
+  { src: '/kaseikai.gif', alt: '社会福祉法人 | 嘉誠会' },
+  { src: '/sakon.gif', alt: '左近' },
+  { src: '/shogakukan.gif', alt: '小学館' },
+];
 
 export default function ClientsList() {
-
   return (
     <div className={styles.container}>
-      <div>
-        <Image
-            src="/gategourmet.gif"
-            alt="wansie"
+      {clients.map((client) => (
+        <div key={client.src}>
+          <Image
+            src={client.src}
+            alt={client.alt}
             className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-        />
-      </div>
-      <div>
-        <Image
-            src="/hoshino.gif"
-            alt="星野リゾート | リゾナーレ八ヶ岳"
-            className={styles.image}
-            width={100}
-            height={100}
+            width={IMAGE_SIZES.CLIENT_LOGO.width}
+            height={IMAGE_SIZES.CLIENT_LOGO.height}
             loading="lazy"
           />
-      </div>
-      <div>
-        <Image
-            src="/irobot.gif"
-            alt="iRobot"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/sony.gif"
-            alt="sony"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/lush.jpg"
-            alt="Lush Fresh Handmade Cosmetics"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/unico.gif"
-            alt="unico"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/sg.gif"
-            alt="Stage Group"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/seiloo.gif"
-            alt="relativ"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/unic.gif"
-            alt="Unic"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/deiberica.gif"
-            alt="Deiberica"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/kaseikai.gif"
-            alt="社会福祉法人 | 嘉誠会"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/sakon.gif"
-            alt="左近"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
-      <div>
-        <Image
-            src="/shogakukan.gif"
-            alt="小学館"
-            className={styles.image}
-            width={100}
-            height={100}
-            loading="lazy"
-          />
-      </div>
+        </div>
+      ))}
     </div>
-  )
+  );
 }

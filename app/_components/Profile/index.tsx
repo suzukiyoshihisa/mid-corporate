@@ -1,10 +1,7 @@
 'use client';
 
 import styles from "./index.module.css";
-import dynamic from 'next/dynamic';
-
-// 遅延読み込みでアニメーションの初期負荷を削減
-const AnimatedContent = dynamic(() => import('../AnimatedContent'), { ssr: false });
+import AnimatedContent from '../AnimatedContent';
 
 export default function Profile() {
   return (

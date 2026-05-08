@@ -5,8 +5,9 @@ import { createContactData } from '../../_actions/contact';
 import { useActionState, useEffect, useState } from 'react';
 import styles from './index.module.css';
 import Link from 'next/link';
+import type { ContactFormState } from '../../_types';
 
-const initialState = {
+const initialState: ContactFormState = {
   status: '',
   message: '',
 };
@@ -45,7 +46,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="name">
-          お名前<span style={{ color: 'red' }}>*</span>
+          お名前<span className={styles.required}>*</span>
         </label>
         <input
           className={styles.textfield}
@@ -58,7 +59,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="company">
-          会社名<span style={{ color: 'red' }}>*</span>
+          会社名<span className={styles.required}>*</span>
         </label>
         <input
           className={styles.textfield}
@@ -71,7 +72,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="email">
-          メールアドレス<span style={{ color: 'red' }}>*</span>
+          メールアドレス<span className={styles.required}>*</span>
         </label>
         <input
           className={styles.textfield}
@@ -84,7 +85,7 @@ export default function ContactForm() {
 
       <div className={styles.item}>
         <label className={styles.label} htmlFor="message">
-          メッセージ<span style={{ color: 'red' }}>*</span>
+          メッセージ<span className={styles.required}>*</span>
         </label>
         <textarea
           className={styles.textarea}
@@ -105,7 +106,7 @@ export default function ContactForm() {
           <Link href="/news/handling" className={styles.link}>
             個人情報の取扱い
           </Link>
-            に同意する<span style={{ color: 'red' }}>*</span>
+            に同意する<span className={styles.required}>*</span>
         </label>
       </div>
 
