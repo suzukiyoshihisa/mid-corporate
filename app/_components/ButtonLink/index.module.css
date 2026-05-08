@@ -16,8 +16,7 @@
 }
 
 .normal:hover {
-  opacity: 0.9;
-  background: #0d6aa8;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .arrow {
@@ -98,7 +97,7 @@
   }
 
   .arrow_white {
-    color: var(--color-text-unpainted);
+    color: var(--color-text-main);
     width: 100%;
     border: 1px solid #000;
   }

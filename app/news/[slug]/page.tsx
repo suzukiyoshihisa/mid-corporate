@@ -43,7 +43,7 @@ export default async function Page(props: Props) {
     <>
       <Article data={data} />
       <div className={styles.footer}>
-        <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
+        <ButtonLink href="/news" variant="outline_black">ニュース一覧へ</ButtonLink>
       </div>
     </>
   );

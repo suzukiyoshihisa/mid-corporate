@@ -45,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: var(--space-4);
 }
 
 .list {
@@ -74,10 +74,12 @@
 
 .image {
   display: block;
-  width: 60px;
-  height: 50px;
+  width: 96px;
+  height: 72px;
   overflow: hidden;
   border-radius: var(--border-radius);
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .content {
