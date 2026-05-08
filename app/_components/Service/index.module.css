@@ -48,7 +48,7 @@
 .title {
   text-align: center;
   margin-bottom: 16px;
-  border-bottom: 0.8px solid rgb(27, 29, 31);
+  border-bottom: 1px solid rgb(27, 29, 31);
 }
 
 .image {
@@ -84,7 +84,7 @@
 
 .special .title {
   color: var(--color-text-unpainted);
-  border-bottom: 0.8px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .special .itemText {
@@ -133,7 +133,7 @@
   
   .specialItem .title {
     color: #333;
-    border-bottom: 0.8px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
   }
   
   .specialItem .itemText {

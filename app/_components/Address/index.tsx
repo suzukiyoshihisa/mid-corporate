@@ -15,6 +15,11 @@ export default function Address() {
         <Profile />
       </div>
       <div className={styles.content}>
+        <div className={styles.iframe}>
+          <YoutubeEmbed videoId="_mJO_Kzi84o" title="Wansie uniform" />
+        </div>
+      </div>
+      <div className={styles.content}>
         <AnimatedContent delay={150}>
           <div className={styles.content1}>
             <div className={styles.inner}>
@@ -46,11 +51,6 @@ export default function Address() {
             </div>
           </div>
         </AnimatedContent>
-      </div>
-      <div className={styles.content}>
-        <div className={styles.iframe}>
-          <YoutubeEmbed videoId="_mJO_Kzi84o" title="Wansie uniform" />
-        </div>
       </div>
     </section>
   );

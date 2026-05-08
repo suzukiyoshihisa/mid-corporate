@@ -1,11 +1,20 @@
 .header {
-  position: absolute;
+  position: fixed;
   padding: 16px 24px 8px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .logoLink {

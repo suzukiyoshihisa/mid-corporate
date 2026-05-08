@@ -23,7 +23,7 @@
   text-align: center;
   line-height: 1.2;
   text-transform: uppercase;
-  border-bottom: 0.5px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
   margin: 0 auto;
 }
 
@@ -50,13 +50,13 @@
 .snsContainer {
   background: #1b1d1f;
   padding: 54px 16px;
-  border-top: 0.5px solid #ffffff;
+  border-top: 1px solid #ffffff;
   height: 100%;
 }
 
 .snsTop {
   padding-bottom: 36px;
-  border-bottom: 0.8px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   text-align: center;
 }
 
