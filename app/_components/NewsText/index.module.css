@@ -4,7 +4,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
-  background-color: #1b1d1f;
+  background-color: var(--color-bg-dark);
 }
 
 .link {

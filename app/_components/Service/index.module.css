@@ -78,7 +78,7 @@
 
 /* 後半2アイテムのスタイル */
 .special {
-  background: #1d1d1f;
+  background: var(--color-bg-dark);
   color: var(--color-text-unpainted);
 }
 
