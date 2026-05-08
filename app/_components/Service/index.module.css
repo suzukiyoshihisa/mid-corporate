@@ -76,19 +76,19 @@
   height: fit-content;
 }
 
-/* 3つ目のアイテムだけスタイル変更 */
+/* 後半2アイテムのスタイル */
 .special {
-  background: var(--color-bg-main);
+  background: #1d1d1f;
   color: var(--color-text-unpainted);
 }
 
 .special .title {
   color: var(--color-text-unpainted);
-  border-bottom: 0.8px solid #ffffff;
+  border-bottom: 0.8px solid rgba(255, 255, 255, 0.2);
 }
 
 .special .itemText {
-  color: var(--color-text-unpainted);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 @media screen and (max-width: 960px) {

@@ -14,7 +14,7 @@
 }
 
 .titleContainer {
-  background-color: var(--color-bg-main);
+  background-color: #1d1d1f;
   display: flex;
   flex-direction: column;
   justify-content: center;
