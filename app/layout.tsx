@@ -9,6 +9,7 @@ const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['400', '700'],
   display: 'swap',
+  variable: '--font-noto',
 });
 
 
@@ -40,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={notoSans.className}><head /><body>
+    <html lang="ja" className={notoSans.variable}><head /><body>
       <Header />
       {children}
       <Footer />

@@ -1,4 +1,5 @@
 :root {
+  --font-sans: var(--font-noto), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -34,6 +35,7 @@ body {
 }
 
 body {
+  font-family: var(--font-sans);
   color: var(--color-text-main);
   line-height: 1.8;
 }
