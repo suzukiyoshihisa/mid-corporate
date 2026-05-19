@@ -18,7 +18,7 @@ export default function Address() {
             alt="代表取締役 廣田将大"
             fill
             className={styles.profilePhoto}
-            sizes="17vw"
+            sizes="(max-width: 640px) 100vw, 17vw"
           />
           <div className={styles.profileOverlay}>
             <p className={styles.profileLabel}>代表取締役 / CEO</p>
