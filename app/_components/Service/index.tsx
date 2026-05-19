@@ -6,126 +6,83 @@ import ButtonLink from "../ButtonLink";
 import AnimatedContent from "../AnimatedContent";
 import { IMAGE_SIZES } from "../../_constants/config";
 
+const items = [
+  {
+    number: '01',
+    title: 'ファッションブランド',
+    src: '/service-wansie.webp',
+    alt: 'WANSIE',
+    text: '伝統的なユニフォームの機能性と日本のクラフトマンシップを融合。現代を生きる人のための機能美とモード感を備えたデイリーウェアを提案します。',
+    link: 'https://www.wansie.tokyo/',
+    label: 'ブランドの詳細を見る',
+    variant: 'arrow' as const,
+  },
+  {
+    number: '02',
+    title: 'ユニフォーム・業務ウェア',
+    src: '/service-uniform.webp',
+    alt: 'WANSIE UNIFORM',
+    text: 'デザインから生産まで一貫対応。スタイル提案型ユニフォームで企業や店舗の魅力を引き出し、小ロットやOEMにも柔軟に対応します。',
+    link: 'https://wansie.tokyo/uniform/',
+    label: 'ユニフォーム事例を見る',
+    variant: 'arrow' as const,
+  },
+  {
+    number: '03',
+    title: 'デザイン・Web制作',
+    src: '/service-web.webp',
+    alt: 'WANSIE DESIGN',
+    text: 'ホームページ、EC、システム、グラフィックまで対応。ブランディングや運営の実体験をもとに、伝わるWEB制作をサポートします。',
+    link: 'https://mid-group.design/',
+    label: 'WEB制作サービスを見る',
+    variant: 'arrow' as const,
+  },
+  {
+    number: '04',
+    title: '人材サービス・スタッフィング',
+    src: '/service-staff.webp',
+    alt: 'mid staffing',
+    text: 'WEBと現場力を活かした即戦力マッチング。アパレル・販売・イベント分野などに、柔軟かつ実務的な人材を提案します。',
+    link: 'https://mid-staffing.studio.site/',
+    label: '人材派遣の詳細を見る',
+    variant: 'arrow' as const,
+  },
+];
+
 export default function Service() {
   return (
     <section className={styles.service} id="service">
-      <div className={styles.contents}>
-        <div className={styles.div1}>
-          <div className={`${styles.serviceTextContainer} ${styles.parallax}`}>
-            <AnimatedContent delay={0}>
-              <h2 className={styles.playfairTitle}>Our Service</h2>
-              <p className={styles.subTitle}>midの主要サービスをご紹介</p>
-            </AnimatedContent>
-          </div>
-        </div>
+      <div className={styles.header}>
+        <h2 className={styles.sectionTitle}>Our Service</h2>
+        <p className={styles.sectionSub}>midの主要サービスをご紹介</p>
+      </div>
 
-        <div className={styles.div2}>
-          <AnimatedContent delay={50}>
+      <div className={styles.grid}>
+        {items.map((item, i) => (
+          <AnimatedContent key={item.number} delay={i * 60}>
             <div className={styles.item}>
-              <h3 className={styles.title}>WANSIE</h3>
               <div className={styles.itemImg}>
                 <Image
-                  src="/service-wansie.webp"
-                  alt="wansie"
-                  className={styles.image}
+                  src={item.src}
+                  alt={item.alt}
+                  className={styles.itemImgSrc}
                   width={IMAGE_SIZES.SERVICE_ITEM.width}
                   height={IMAGE_SIZES.SERVICE_ITEM.height}
+                  sizes="(max-width: 768px) 100vw, (max-width: 960px) 50vw, 25vw"
                   loading="lazy"
                 />
               </div>
-              <p className={styles.itemHeading}>
-                midの運営する<br />ワークウェアブランド
-              </p>
-              <p className={styles.itemText}>
-                伝統的なユニフォームの機能性と日本のクラフトマンシップを融合。
-                オン・オフを問わず、現代を生きる人のための機能美とモード感を備えたデイリーウェアを提案します。
-              </p>
+              <span className={styles.number}>{item.number}</span>
+              <h3 className={styles.itemTitle}>{item.title}</h3>
+              <p className={styles.itemText}>{item.text}</p>
               <div className={styles.btnBox}>
-                <ButtonLink href="https://www.wansie.tokyo/" variant="arrow">ブランドの詳細を見る</ButtonLink>
+                <ButtonLink href={item.link} variant={item.variant}>
+                  {item.label}
+                </ButtonLink>
               </div>
             </div>
           </AnimatedContent>
-        </div>
-
-        <div className={styles.div3}>
-          <AnimatedContent delay={100}>
-            <div className={styles.item}>
-              <h3 className={styles.title}>WANSIE UNIFORM</h3>
-              <div className={styles.itemImg}>
-                <Image
-                  src="/service-uniform.webp"
-                  alt="wansie"
-                  className={styles.image}
-                  width={IMAGE_SIZES.SERVICE_ITEM.width}
-                  height={IMAGE_SIZES.SERVICE_ITEM.height}
-                  loading="lazy"
-                />
-              </div>
-              <p className={styles.itemHeading}>
-                店舗やオフィスの<br />オリジナルユニフォーム
-              </p>
-              <p className={styles.itemText}>
-                デザインから生産まで一貫対応。
-                スタイル提案型ユニフォームで企業や店舗の魅力を引き出し、小ロットやOEMにも柔軟に対応します。
-              </p>
-              <div className={styles.btnBox}>
-                <ButtonLink href="https://wansie.tokyo/uniform/" variant="arrow">ユニフォーム事例を見る</ButtonLink>
-              </div>
-            </div>
-          </AnimatedContent>
-        </div>
-
-        <div className={`${styles.div4} ${styles.special}`}>
-          <AnimatedContent delay={150}>
-            <div className={`${styles.item} ${styles.specialItem}`}>
-              <h3 className={styles.title}>WANSIE DESIGN</h3>
-              <div className={styles.itemImg}>
-                <Image
-                  src="/service-web.webp"
-                  alt="wansie"
-                  className={styles.image}
-                  width={IMAGE_SIZES.SERVICE_ITEM.width}
-                  height={IMAGE_SIZES.SERVICE_ITEM.height}
-                  loading="lazy"
-                />
-              </div>
-              <p className={styles.itemHeading}>企画・制作・運用を<br />オールインワン</p>
-              <p className={styles.itemText}>
-                ホームページ、EC、システム、グラフィックまで対応。
-                ブランディングや運営の実体験をもとに、伝わるWEB制作をサポートします。
-              </p>
-              <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-group.design/" variant="arrow_white">WEB制作サービスを見る</ButtonLink>
-              </div>
-            </div>
-          </AnimatedContent>
-        </div>
-
-        <div className={`${styles.div5} ${styles.special}`}>
-          <AnimatedContent delay={200}>
-            <div className={`${styles.item} ${styles.specialItem}`}>
-              <h3 className={styles.title}>mid staffing</h3>
-              <div className={styles.itemImg}>
-                <Image
-                  src="/service-staff.webp"
-                  alt="wansie staffing"
-                  className={styles.image}
-                  width={IMAGE_SIZES.SERVICE_ITEM.width}
-                  height={IMAGE_SIZES.SERVICE_ITEM.height}
-                  loading="lazy"
-                />
-              </div>
-              <p className={styles.itemHeading}>最適な出会いを創出する<br />人材派遣事業</p>
-              <p className={styles.itemText}>
-                WEBと現場力を活かした即戦力マッチング。
-                アパレル・販売・イベント分野などに、柔軟かつ実務的な人材を提案します。
-              </p>
-              <div className={styles.btnBox}>
-                <ButtonLink href="https://mid-staffing.studio.site/" variant="arrow_white">人材派遣の詳細を見る</ButtonLink>
-              </div>
-            </div>
-          </AnimatedContent>
-        </div>
+        ))}
       </div>
     </section>
   );

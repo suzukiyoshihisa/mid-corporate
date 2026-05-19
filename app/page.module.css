@@ -1,67 +1,91 @@
 .top {
+  display: grid;
+  grid-template-columns: 2fr 3fr; /* 40% : 60% */
+  min-height: 88vh;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--space-6) + var(--space-3)) var(--space-4) var(--space-6);
+  background-color: var(--color-bg-off-white);
+}
+
+.heroHeading {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(36px, 4.5vw, 72px);
+  line-height: 1.15;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-3);
+}
+
+.heroSub {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: var(--color-text-sub);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+
+.heroCta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.heroRight {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  height: 80vh;
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.description {
-  text-align: center;
-}
-
-.bgimg {
+.heroPicture {
   position: absolute;
-  top: 0;
-  right: 0;
+  inset: 0;
   width: 100%;
-  height: 600px;
-  object-fit: cover;
-  object-position: right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: -1;
+  height: 100%;
 }
 
-.bgimgSp {
-  display: none;
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.15) saturate(0.95);
+}
+
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: unset;
+  }
+
+  .heroRight {
+    order: -1;
+    height: 55vw;
+    min-height: 200px;
+  }
+
+  .heroLeft {
+    padding: var(--space-5) var(--space-3) var(--space-5);
+  }
+
+  .heroHeading {
+    font-size: clamp(28px, 7vw, 40px);
+    margin-bottom: var(--space-2);
+  }
+
+  .heroSub {
+    font-size: 14px;
+    margin-bottom: var(--space-3);
+  }
 }
 
 @media (max-width: 640px) {
-  .title {
-    font-size: 2rem;
-    text-align: left;
-  }
-
-  .description {
-    text-align: center;
-    font-size: 0.9rem;
-    text-align: left;
-  }
-
-  .bgimg {
-    display: none;
-  }
-
-  .bgimgSp {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: auto;
-    height: 600px;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
+  .heroLeft {
+    padding: var(--space-4) 20px;
   }
 }

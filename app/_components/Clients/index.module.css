@@ -22,6 +22,7 @@
   font-weight: 600;
   line-height: 1.5;
   text-align: center;
+  padding: var(--space-6) var(--space-3);
 }
 
 .banner {

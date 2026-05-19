@@ -1,5 +1,5 @@
 :root {
-  --font-sans: var(--font-noto), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-sans: var(--font-inter), "Helvetica Neue", var(--font-noto), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   --font-display: var(--font-playfair), serif;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -10,8 +10,8 @@
   --color-text-unpainted: #e0e0e0;
   --color-text-error: #f33;
   
-  --color-bg-main: #105D94;
   --color-bg-sub: #fafafa;
+  --color-bg-off-white: #fefefe;
   --color-bg-dark: #1d1d1f;
   --color-bg-painted: #333;
 
@@ -20,6 +20,7 @@
   --color-border-light: #f3f3f3;
   --color-current: #eee;
   --color-button-primary: #333;
+  --color-button-contact: #8a7260;
   --border-radius: 4px;
 
   --space-1: 8px;

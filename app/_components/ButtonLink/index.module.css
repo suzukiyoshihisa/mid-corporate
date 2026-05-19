@@ -5,7 +5,6 @@
   padding: 5px;
   transition: 0.3s;
   font-size: 15px;
-  font-weight: bold;
 }
 
 .normal {
@@ -30,18 +29,18 @@
 .arrow::before {
   position: absolute;
   bottom: -4px;
-  left: 40px;
+  left: 0;
   transition: 0.3s;
   mask-image: url(/arrow.svg);
   background: var(--color-text-main);
-  width: 84px;
+  width: 44px;
   height: 4px;
   content: "";
 }
 
 .arrow:hover::before {
   bottom: -4px;
-  left: 52px;
+  left: 10px;
 }
 
 .arrow_white {
@@ -79,6 +78,19 @@
 .outline_black:hover {
   color: var(--color-text-unpainted);
   background: #000;
+}
+
+.filled_black {
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  font-weight: normal;
+}
+
+.filled_black:hover {
+  color: #000;
+  background: transparent;
 }
 
 @media (max-width: 640px) {

@@ -5,4 +5,4 @@ export type ContactFormState = {
   message: string;
 };
 
-export type ButtonVariant = 'normal' | 'arrow' | 'arrow_white' | 'outline' | 'outline_black';
+export type ButtonVariant = 'normal' | 'arrow' | 'arrow_white' | 'outline' | 'outline_black' | 'filled_black';

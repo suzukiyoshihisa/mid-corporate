@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  padding: 16px 24px 8px;
+  padding: 16px var(--space-4) 8px;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -24,15 +24,15 @@
 .logo {
   height: 36px;
   width: auto;
-  transition: filter 0.3s ease;
-}
-
-.logoDark {
   filter: brightness(0);
 }
 
 @media (max-width: 640px) {
   .header {
-    padding: 24px 16px 8px;
+    padding: 24px 20px 8px;
+  }
+
+  .logoWhite {
+    filter: brightness(0) invert(1);
   }
 }

@@ -3,86 +3,61 @@
   color: var(--color-text-unpainted);
 }
 
-.items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.item {
-  text-align: center;
-}
-
-.infoContainer {
-  padding: var(--space-4);
-  background: url(/company-info-img.webp) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.sectionTitle {
-  font-size: 50px;
-  font-family: var(--font-display);
-}
-
-.infoItem {
-  margin-top: var(--space-2);
-  text-align: center;
-}
-
-.infoTitle {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.infoText {
-  font-size: 16px;
-  color: var(--color-text-unpainted);
-  font-weight: 300;
-  line-height: 1.75;
-}
-
-.nav {
-  font-size: 14px;
-  padding: 8px 16px;
+.footerBottom {
+  background-color: var(--color-bg-off-white);
+  color: var(--color-text-main);
+  padding: 20px var(--space-4);
   display: flex;
-  gap: 24px;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
 }
 
-@media (max-width: 640px) {
-  .items {
-    grid-template-columns: 1fr;
-  }
+.footerLogoLink {
+  display: flex;
+  flex-shrink: 0;
+}
 
-  .sectionTitle {
-    font-size: 30px;
-  }
+.footerLogo {
+  height: 28px;
+  width: auto;
+  filter: brightness(0);
+}
 
-  .infoItem {
-    margin-top: var(--space-1);
-    text-align: center;
-  }
+.footerNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-sub);
+}
 
-  .infoTitle {
-    font-size: 16px;
-    font-weight: 600;
-  }
+.footerNav a:hover {
+  color: var(--color-text-main);
+  text-decoration: underline;
+}
 
-  .infoText {
-    font-size: 14px;
-    color: var(--color-text-unpainted);
-    font-weight: 300;
-    line-height: 1.75;
-  }
+.divider {
+  color: #bbb;
+}
 
-  .footer {
-    padding-bottom: var(--space-4);
-  }
+.copyright {
+  font-size: 12px;
+  color: var(--color-text-sub);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
-  .nav {
-    display: flex;
+@media (max-width: 768px) {
+  .footerBottom {
     flex-direction: column;
     text-align: center;
-    gap: 8px;
+    gap: 12px;
+    padding: var(--space-3);
+  }
+
+  .footerNav {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

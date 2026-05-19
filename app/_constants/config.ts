@@ -19,7 +19,7 @@ export const SOCIAL_LINKS = {
 
 export const IMAGE_SIZES = {
   CLIENT_LOGO: { width: 100, height: 100 },
-  SERVICE_ITEM: { width: 330, height: 215 },
+  SERVICE_ITEM: { width: 800, height: 600 },
   NO_IMAGE: { width: 1200, height: 630 },
   SNS_TOP: { width: 154, height: 153 },
 } as const;

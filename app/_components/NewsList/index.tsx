@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonLink from '../ButtonLink';
 import Date from '../Date';
 import styles from './index.module.css';
 import AnimatedContent from '../AnimatedContent';
@@ -19,54 +18,89 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
     return <p>記事がありません。</p>;
   }
 
+  if (layout === 'block') {
+    return (
+      <div className={styles.block}>
+        {news.map((article) => (
+          <Link key={article.id} href={`/news/${article.id}`} className={styles.blockItem}>
+            {article.thumbnail ? (
+              <Image
+                className={styles.blockThumb}
+                src={article.thumbnail.url}
+                alt={article.title}
+                width={article.thumbnail.width}
+                height={article.thumbnail.height}
+                loading="lazy"
+              />
+            ) : (
+              <Image
+                className={styles.blockThumb}
+                src="/no-image.png"
+                alt="No Image"
+                width={IMAGE_SIZES.NO_IMAGE.width}
+                height={IMAGE_SIZES.NO_IMAGE.height}
+                loading="lazy"
+              />
+            )}
+            <div className={styles.blockBody}>
+              <p className={styles.date}><Date date={article.publishedAt ?? article.createdAt} /></p>
+              <p className={styles.category}>{article.category?.name}</p>
+              <p className={styles.articleTitle}>{article.title}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    );
+  }
+
   return (
-    <div className={`${styles.news} ${layout === 'block' ? styles.block : styles.grid}`}>
-      <div className={styles.titleContainer}>
-        <AnimatedContent delay={150}>
-          <h2 className={styles.playfairTitle}>News</h2>
-          <p className={styles.subTitle}>midの最新情報をご紹介</p>
-          <div className={styles.titleFooter}>
-            <ButtonLink href="/news" variant="normal">
-              ALL NEWS ON OUR BLOG
-            </ButtonLink>
-          </div>
+    <div className={styles.wrapper}>
+      <div className={styles.titleBlock}>
+        <AnimatedContent delay={0}>
+          <h2 className={styles.sectionTitle}>News</h2>
+          <p className={styles.sectionSub}>midの最新情報</p>
+          <Link href="/news" className={styles.allLink}>ALL NEWS →</Link>
         </AnimatedContent>
       </div>
 
-      <ul className={styles.list}>
-        <AnimatedContent delay={50}>
-          {news.map((article) => (
-            <li key={article.id} className={styles.item}>
-              {article.thumbnail ? (
-                <Image
-                  className={styles.image}
-                  src={article.thumbnail.url}
-                  alt={article.title}
-                  width={article.thumbnail.width}
-                  height={article.thumbnail.height}
-                  loading="lazy"
-                />
-              ) : (
-                <Image
-                  className={styles.image}
-                  src="/no-image.png"
-                  alt="No Image"
-                  width={IMAGE_SIZES.NO_IMAGE.width}
-                  height={IMAGE_SIZES.NO_IMAGE.height}
-                  loading="lazy"
-                />
-              )}
-              <Link href={`/news/${article.id}`} className={styles.link}>
-                <dl className={styles.content}>
-                  <dt className={styles.title}>{article.title}</dt>
-                  <dd className={styles.meta}>
-                    <Date date={article.publishedAt ?? article.createdAt} />
-                  </dd>
-                </dl>
+      <ul className={styles.grid}>
+        {news.map((article, i) => (
+          <li key={article.id} className={styles.cardWrapper}>
+            <AnimatedContent delay={i * 60}>
+              <Link href={`/news/${article.id}`} className={styles.card}>
+                <div className={styles.thumbnail}>
+                  {article.thumbnail ? (
+                    <Image
+                      fill
+                      className={styles.thumbImg}
+                      src={article.thumbnail.url}
+                      alt={article.title}
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <Image
+                      fill
+                      className={styles.thumbImg}
+                      src="/no-image.png"
+                      alt="No Image"
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <div className={styles.cardBody}>
+                  <p className={styles.date}><Date date={article.publishedAt ?? article.createdAt} /></p>
+                  {article.category && (
+                    <p className={styles.category}>{article.category.name}</p>
+                  )}
+                  <p className={styles.articleTitle}>{article.title}</p>
+                  <span className={styles.arrow}>→</span>
+                </div>
               </Link>
-            </li>
-          ))}
-        </AnimatedContent>
+            </AnimatedContent>
+          </li>
+        ))}
       </ul>
     </div>
   );

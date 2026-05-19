@@ -5,6 +5,27 @@
   transition: color 0.3s ease;
 }
 
+.items a {
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.items a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+
+.items a:hover::after {
+  width: 100%;
+}
+
 .itemsScrolled {
   color: var(--color-text-main);
 }
@@ -40,6 +61,12 @@
     background: none;
     border: none;
     cursor: pointer;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+  }
+
+  .buttonScrolled {
+    filter: brightness(0);
   }
 
   .close {

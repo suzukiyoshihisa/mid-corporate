@@ -44,7 +44,7 @@ export default function Menu({ scrolled }: Props) {
           />
         </button>
       </nav>
-      <button className={styles.button} onClick={open}>
+      <button className={cx(styles.button, scrolled && styles.buttonScrolled)} onClick={open}>
         <Image src="/menu.svg" alt="メニュー" width={24} height={24} />
       </button>
     </div>
