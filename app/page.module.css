@@ -65,8 +65,8 @@
 
   .heroRight {
     order: -1;
-    height: 55vw;
-    min-height: 200px;
+    height: 90vw;
+    min-height: 280px;
   }
 
   .heroLeft {
