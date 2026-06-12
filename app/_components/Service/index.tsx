@@ -53,8 +53,8 @@ const items = [
     src: '/service-bar.svg',
     alt: 'mid bar',
     text: 'ブランドの世界観をそのまま体験できるバーを運営。服やデザインだけでは伝えきれない価値観を、空間とサービスを通じて届けます。',
-    link: '#footer',
-    label: 'お問い合わせはこちら',
+    link: 'https://www.instagram.com/wansie_flagshipstore',
+    label: '店舗のInstagramを見る',
     variant: 'arrow' as const,
   },
 ];
