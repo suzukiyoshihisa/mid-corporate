@@ -26,9 +26,18 @@
   color: var(--color-text-sub);
 }
 
+/* 3+2レイアウト: 6カラムを各カード2カラムで使い、4枚目をオフセットして2段目を中央寄せ */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid > * {
+  grid-column: span 2;
+}
+
+.grid > *:nth-child(4) {
+  grid-column: 2 / span 2;
 }
 
 .item {
@@ -46,7 +55,7 @@
 
 .itemImg {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -96,6 +105,11 @@
 @media screen and (max-width: 960px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid > *,
+  .grid > *:nth-child(4) {
+    grid-column: auto;
   }
 }
 

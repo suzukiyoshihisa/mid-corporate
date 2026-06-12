@@ -28,20 +28,23 @@ const playfairDisplay = Playfair_Display({
 });
 
 
+const SITE_DESCRIPTION =
+  "株式会社midは、ファッションブランド「WANSIE」、ユニフォーム、Web制作、人材サービス、飲食の5つの事業を通じて、企業やブランドの表現と成長を支えるクリエイティブカンパニーです。";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mid-corporate.vercel.app"),
+  metadataBase: new URL("https://mid-group.jp"),
   title: {
-    template: "%s | 株式会社 mid",
-    default: "株式会社midはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
+    template: "%s | 株式会社mid",
+    default: "株式会社mid | 表層を超えて、本質へ。",
   },
-  description: "株式会社midはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: "株式会社 mid",
-    description: "株式会社midはアパレルブランド「WANSIE」の運営、WEB制作・運用、人材派遣を行うクリエイティブカンパニーです。",
+    title: "株式会社mid | 表層を超えて、本質へ。",
+    description: SITE_DESCRIPTION,
     images: ["/ogp.png"],
   },
   alternates: {
-    canonical: "https://mid-corporate.vercel.app",
+    canonical: "https://mid-group.jp",
   }
 };
 

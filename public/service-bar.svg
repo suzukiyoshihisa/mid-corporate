@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#16140f"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#3d382c" stroke-width="1"/>
+  <text x="400" y="290" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-size="72" fill="#cbbf9f" letter-spacing="6">Bar</text>
+  <text x="400" y="345" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#8a8270" letter-spacing="5">EXPERIENCE THE BRAND</text>
+</svg>

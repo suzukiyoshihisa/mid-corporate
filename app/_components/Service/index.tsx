@@ -47,6 +47,16 @@ const items = [
     label: '人材派遣の詳細を見る',
     variant: 'arrow' as const,
   },
+  {
+    number: '05',
+    title: '飲食・バー',
+    src: '/service-bar.svg',
+    alt: 'mid bar',
+    text: 'ブランドの世界観をそのまま体験できるバーを運営。服やデザインだけでは伝えきれない価値観を、空間とサービスを通じて届けます。',
+    link: '#footer',
+    label: 'お問い合わせはこちら',
+    variant: 'arrow' as const,
+  },
 ];
 
 export default function Service() {

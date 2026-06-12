@@ -20,7 +20,7 @@ export default async function Home() {
           <h1 className={styles.heroHeading}>Be the<br/>Creative<br/>Engine.</h1>
           <p className={styles.heroSub}>
             表層を超えて、本質へ。<br/>
-            ファッション、ユニフォーム、Web、そして人材。<br/>
+            ファッション、ユニフォーム、Web、人材、そして飲食。<br/>
             midは、企業やブランドの表現と成長を支える<br/>
             クリエイティブカンパニーです。
           </p>
