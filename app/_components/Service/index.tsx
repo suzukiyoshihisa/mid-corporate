@@ -42,7 +42,7 @@ const items = [
     title: '人材サービス・スタッフィング',
     src: '/service-staff.webp',
     alt: 'mid staffing',
-    text: 'WEBと現場力を活かした即戦力マッチング。アパレル・販売・イベント分野などに、柔軟かつ実務的な人材を提案します。',
+    text: 'エンジニアをはじめとするIT人材のマッチングを主軸に、販売・営業分野にも対応。即戦力となる人材を柔軟かつ実務的に提案します。',
     link: 'https://mid-staffing.studio.site/',
     label: '人材派遣の詳細を見る',
     variant: 'arrow' as const,
