@@ -147,18 +147,19 @@
 
 .button {
   border: none;
-  background-color: var(--color-button-contact);
+  background-color: #fff;
   padding: 14px 36px;
-  font-size: 15px;
+  font-size: 13px;
   font-family: var(--font-sans);
-  color: #fff;
+  color: var(--color-text-main);
   cursor: pointer;
-  letter-spacing: 0.04em;
-  transition: background-color 0.25s ease;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease;
 }
 
 .button:hover {
-  background-color: color-mix(in srgb, var(--color-button-contact) 85%, black);
+  opacity: 0.75;
 }
 
 .success {

@@ -7,8 +7,9 @@
 
 .items a {
   position: relative;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .items a::after {

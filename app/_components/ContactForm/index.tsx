@@ -5,6 +5,7 @@ import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recapt
 import { createContactData } from '../../_actions/contact';
 import { useActionState, useEffect, useRef, useState } from 'react';
 import styles from './index.module.css';
+import AnimatedHeading from '../AnimatedHeading';
 import Link from 'next/link';
 import type { ContactFormState } from '../../_types';
 
@@ -70,7 +71,7 @@ function ContactFormContent() {
     <section className={styles.contactSection}>
       <div className={styles.inner}>
         <div className={styles.contactLeft}>
-          <h2 className={styles.sectionTitle}>Contact</h2>
+          <AnimatedHeading className={styles.sectionTitle}>Contact</AnimatedHeading>
           <p className={styles.subTitle}>
             サービスやお見積りに関するご相談。
             <br />

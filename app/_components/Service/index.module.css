@@ -22,8 +22,10 @@
 }
 
 .sectionSub {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .grid {
@@ -74,17 +76,18 @@
 }
 
 .itemTitle {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
   color: var(--color-text-main);
 }
 
 .itemText {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-sub);
-  line-height: 1.8;
+  line-height: 1.85;
   flex: 1;
   margin-bottom: var(--space-4);
 }

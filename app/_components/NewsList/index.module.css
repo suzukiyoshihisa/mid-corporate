@@ -29,8 +29,10 @@
 }
 
 .sectionSub {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin-bottom: var(--space-3);
 }
 
@@ -96,18 +98,19 @@
 }
 
 .category {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--color-text-sub);
   border: 1px solid var(--color-border);
   padding: 2px 6px;
   width: fit-content;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .articleTitle {
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.65;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.7;
   flex: 1;
   color: var(--color-text-main);
 }

@@ -1,23 +1,25 @@
 import Link from 'next/link';
 import { getNewsList } from '../../_libs/microcms';
-import Date from '../Date';
+import { formatDate } from '../../_libs/utils';
 import styles from './index.module.css';
+import NewsMarquee from './NewsMarquee';
 
 export default async function LatestNewsText() {
-  const { contents } = await getNewsList({ limit: 1 });
-  const latest = contents[0];
+  const { contents } = await getNewsList({ limit: 3 });
 
-  if (!latest) return null;
+  if (!contents.length) return null;
 
-  return (   
+  const items = contents.map((post) => ({
+    id: post.id,
+    title: post.title,
+    date: formatDate(post.publishedAt ?? post.createdAt),
+    category: post.category?.name ?? null,
+  }));
+
+  return (
     <div className={styles.wrapper}>
-      <Link href={`/news/${latest.id}`} className={styles.link}>
-        <div className={styles.label}>NEW POST</div>
-        <div className={styles.postData}>
-          <div className={styles.date}><Date date={latest.publishedAt ?? latest.createdAt} /></div>
-          <div className={styles.title}>{latest.title}</div>
-        </div>
-      </Link>
+      <div className={styles.label}>NEWS</div>
+      <NewsMarquee items={items} />
     </div>
   );
 }

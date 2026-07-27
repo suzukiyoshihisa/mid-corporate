@@ -7,6 +7,7 @@ import Service from './_components/Service';
 import NewsList from './_components/NewsList';
 import Address from './_components/Address';
 import ButtonLink from './_components/ButtonLink';
+import HeroHeading from './_components/HeroHeading';
 
 export const revalidate = 60;
 
@@ -17,7 +18,7 @@ export default async function Home() {
     <>
       <section className={styles.top}>
         <div className={styles.heroLeft}>
-          <h1 className={styles.heroHeading}>Be the<br/>Creative<br/>Engine.</h1>
+          <HeroHeading />
           <p className={styles.heroSub}>
             表層を超えて、本質へ。<br/>
             ファッション、ユニフォーム、Web、人材、そして飲食。<br/>
@@ -35,19 +36,15 @@ export default async function Home() {
         </div>
 
         <div className={styles.heroRight}>
-          <picture className={styles.heroPicture}>
-            <source srcSet="/img-mv-sp.webp" media="(max-width: 768px)" type="image/webp" />
-            <source srcSet="/img-mv.webp" media="(min-width: 769px)" type="image/webp" />
-            <img
-              src="/img-mv.webp"
-              alt="株式会社mid メインビジュアル"
-              width={1600}
-              height={400}
-              className={styles.heroImg}
-              loading="eager"
-              decoding="async"
-            />
-          </picture>
+          <video
+            className={styles.heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/hero-v3.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import styles from "./index.module.css";
 import AnimatedContent from '../AnimatedContent';
+import AnimatedHeading from '../AnimatedHeading';
 import CountUp from '../CountUp';
 import { COMPANY_INFO } from '../../_constants/config';
 
@@ -35,7 +36,7 @@ export default function Address() {
       {/* Col 2: Company info */}
       <div className={styles.infoCol}>
         <AnimatedContent delay={150}>
-          <h2 className={styles.infoTitle}>Company Info.</h2>
+          <AnimatedHeading className={styles.infoTitle}>Company Info.</AnimatedHeading>
           <dl className={styles.infoList}>
             <div className={styles.infoRow}>
               <dt className={styles.infoTerm}>会社名</dt>
@@ -89,7 +90,6 @@ export default function Address() {
               from={0}
               to={36}
               separator=","
-              direction="up"
               duration={1}
               className="count-up-text"
             />

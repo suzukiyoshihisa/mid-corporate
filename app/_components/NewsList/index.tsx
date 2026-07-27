@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Date from '../Date';
 import styles from './index.module.css';
 import AnimatedContent from '../AnimatedContent';
+import AnimatedHeading from '../AnimatedHeading';
 import { News } from '../../_libs/microcms';
 import { IMAGE_SIZES } from '../../_constants/config';
 
@@ -57,7 +58,7 @@ export default function NewsList({ news, layout = 'grid' }: Props) {
     <div className={styles.wrapper}>
       <div className={styles.titleBlock}>
         <AnimatedContent delay={0}>
-          <h2 className={styles.sectionTitle}>News</h2>
+          <AnimatedHeading className={styles.sectionTitle}>News</AnimatedHeading>
           <p className={styles.sectionSub}>midの最新情報</p>
           <Link href="/news" className={styles.allLink}>ALL NEWS →</Link>
         </AnimatedContent>

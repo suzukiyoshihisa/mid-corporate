@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import ButtonLink from "../ButtonLink";
 import AnimatedContent from "../AnimatedContent";
+import AnimatedHeading from "../AnimatedHeading";
 import { IMAGE_SIZES } from "../../_constants/config";
 
 const items = [
@@ -63,7 +64,7 @@ export default function Service() {
   return (
     <section className={styles.service} id="service">
       <div className={styles.header}>
-        <h2 className={styles.sectionTitle}>Our Service</h2>
+        <AnimatedHeading className={styles.sectionTitle}>Our Service</AnimatedHeading>
         <p className={styles.sectionSub}>midの主要サービスをご紹介</p>
       </div>
 

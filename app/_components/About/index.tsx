@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './index.module.css';
 import AnimatedContent from '../AnimatedContent';
+import AnimatedHeading from '../AnimatedHeading';
 import { SOCIAL_LINKS, IMAGE_SIZES } from '../../_constants/config';
 
 export default function About() {
@@ -12,7 +13,7 @@ export default function About() {
       <div className={styles.container}>
         <AnimatedContent delay={0}>
           <div className={styles.textContainer}>
-            <h2 className={styles.title}>About Us.</h2>
+            <AnimatedHeading className={styles.title}>About Us.</AnimatedHeading>
             <p className={styles.text}>
             株式会社midは、新宿を拠点に、ファッション・ユニフォーム・Web・人材・飲食を横断するクリエイティブカンパニーです。</p>
             <p className={styles.text}>自社ブランド「WANSIE」の企画・製造、企業の魅力を引き出すユニフォーム事業、Webサイト制作から運用までを担うWeb事業部、ブランドの世界観を体験できるバー、そしてエンジニアやIT人材の派遣事業、ものづくりからサービス、人材、場づくりまで幅広く展開しています。</p>
