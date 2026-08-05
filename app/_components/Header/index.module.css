@@ -25,14 +25,15 @@
   height: 36px;
   width: auto;
   filter: brightness(0);
+  transition: filter 0.3s ease;
+}
+
+.logoWhite {
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 640px) {
   .header {
     padding: 24px 20px 8px;
-  }
-
-  .logoWhite {
-    filter: brightness(0) invert(1);
   }
 }

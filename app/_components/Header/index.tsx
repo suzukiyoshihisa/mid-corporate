@@ -10,7 +10,7 @@ import Menu from '../Menu';
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const isTop = pathname === '/';
+  const hasDarkHeader = pathname === '/' || pathname.startsWith('/news');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -20,7 +20,7 @@ export default function Header() {
 
   const logoClass = [
     styles.logo,
-    isTop && !scrolled ? styles.logoWhite : '',
+    hasDarkHeader && !scrolled ? styles.logoWhite : '',
   ].join(' ');
 
   return (

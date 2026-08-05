@@ -1,0 +1,61 @@
+.pageWrapper {
+  background-color: var(--color-bg-off-white);
+  min-height: 100vh;
+}
+
+.pageHeader {
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0 var(--space-4);
+}
+
+.pageHeaderInner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  /* top padding clears the fixed header (approx 60px) + breathing room */
+  padding: calc(var(--space-6) + var(--space-4)) 0 var(--space-4);
+}
+
+.pageTitle {
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.pageSub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding-bottom: 8px;
+}
+
+.pageContent {
+  padding: var(--space-4) var(--space-4) var(--space-6);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    padding: 0 20px;
+  }
+
+  .pageHeaderInner {
+    padding: calc(var(--space-5) + var(--space-3)) 0 var(--space-3);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  .pageContent {
+    padding: var(--space-3) 20px var(--space-5);
+  }
+}
