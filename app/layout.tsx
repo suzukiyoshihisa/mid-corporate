@@ -39,6 +39,23 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    url: "https://mid-group.jp",
+    siteName: "株式会社mid",
+    title: "株式会社mid | 表層を超えて、本質へ。",
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: "/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "株式会社mid | 表層を超えて、本質へ。",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "株式会社mid | 表層を超えて、本質へ。",
     description: SITE_DESCRIPTION,
     images: ["/ogp.png"],

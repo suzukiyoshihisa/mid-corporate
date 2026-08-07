@@ -21,13 +21,22 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     draftKey: searchParams.dk,
   });
 
+  const ogImage = data?.thumbnail?.url ?? '/ogp.png';
+
   return {
     title: data.title,
     description: data.description,
     openGraph: {
+      type: 'article',
       title: data.title,
       description: data.description,
-      images: [data?.thumbnail?.url ?? ''],
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.title,
+      description: data.description,
+      images: [ogImage],
     },
   };
 }
