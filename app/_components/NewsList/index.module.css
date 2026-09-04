@@ -21,7 +21,6 @@
   font-family: var(--font-sans);
   font-size: clamp(28px, 3vw, 48px);
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: -0.01em;
   line-height: 1.1;
   color: var(--color-text-main);
@@ -31,7 +30,6 @@
 .sectionSub {
   font-size: 11px;
   color: var(--color-text-sub);
-  text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: var(--space-3);
 }
