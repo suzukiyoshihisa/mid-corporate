@@ -8,7 +8,9 @@
   --text-gap: clamp(20px, 2.22vw, 34px);          /* 1440 → 32 */
   --img-gap: clamp(24px, 2.78vw, 44px);           /* 1440 → 40 */
   --text-w: clamp(240px, 21.7vw, 340px);          /* 1440 → 312（説明文・リンクの横幅） */
-  --img-ratio: 696 / 337;                         /* 1440 → 696×337 */
+  --img-ratio: 3 / 2;                             /* 画像の縦横比（固定） */
+  --content-w: clamp(320px, 42vw, 560px);         /* カード内コンテンツ幅の上限 */
+  --dwell: clamp(220px, 34vh, 380px);             /* カード間の余白＝“滞在”スクロール量（参考: shinka 30rem） */
 
   padding: var(--space-5) 0 var(--space-6);
   background: var(--color-bg-off-white);
@@ -38,7 +40,6 @@
 .sectionTitle {
   font-size: clamp(30px, 3.34vw, 48px); /* 1440 → 48 */
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: -0.01em;
   line-height: 1.1;
   color: var(--color-text-main);
@@ -59,17 +60,24 @@
 .item {
   position: sticky;
   top: 0;
-  /* 背景（ガラス）はヘッダー下まで敷き、コンテンツはヘッダーを除いた領域の上下中央に。
-     コンテンツがはみ出す場合は画像側が縮む（object-fit: cover でトリミング）。 */
+  /* 背景（ガラス）はヘッダー下まで敷き、コンテンツはヘッダーを除いた領域の上下中央に */
   height: 100svh;
   overflow: hidden;
   isolation: isolate;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* 縦中央。ただし画面が低くコンテンツがはみ出す時は上寄せ（番号がヘッダーに被らない） */
+  justify-content: safe center;
   align-items: flex-start;
   background: transparent;
-  padding: calc(var(--header-h) + var(--card-pad)) var(--card-pad) var(--card-pad);
+  /* 上パディング = ヘッダー分 + 余白。ヘッダーを除いた領域で上下の余白が等しくなる
+     （上下の余白は控えめにして画像のトリミングを減らす。左右は --card-pad のまま） */
+  padding: calc(var(--header-h) + var(--space-4)) var(--card-pad) var(--space-4);
+}
+
+/* カード間に余白を入れると、その分だけ前のカードが“滞在”してから次が重なる（参考: shinka-inc.com） */
+.item + .item {
+  margin-top: var(--dwell);
 }
 
 /* ① 下敷き画像（各カード自身の画像・薄く） */
@@ -104,6 +112,8 @@
 
 .itemBody {
   width: 100%;
+  max-width: var(--content-w);
+  /* 伸びない・縮める：画面が低い時は画像を縮めてカード内（＋余白）に収める */
   flex: 0 1 auto;
   min-height: 0;
   display: flex;
@@ -119,16 +129,13 @@
   letter-spacing: 0.02em;
   line-height: 1;
   margin-bottom: 12px;
-}
-
-.number,
-.itemHead {
   flex: none;
 }
 
 .itemHead {
   display: flex;
   flex-direction: column;
+  flex: none;
 }
 
 .brand {
@@ -136,7 +143,6 @@
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--color-text-main);
   margin-bottom: 6px;
 }
@@ -184,9 +190,9 @@
 
 .itemImg {
   width: 100%;
-  aspect-ratio: var(--img-ratio);  /* 幅はカードに追従、縦は比率で */
-  flex: 0 1 auto;                   /* はみ出す時はここが縮む */
-  min-height: 0;
+  aspect-ratio: var(--img-ratio);  /* 基本 3:2・カード幅いっぱい */
+  flex: 0 1 auto;                   /* 画面が低い時は縮む（object-fit: cover でトリミング） */
+  min-height: 200px;               /* 縮みすぎ防止 */
   overflow: hidden;
   margin-top: var(--img-gap);
 }
@@ -195,10 +201,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;   /* 縮んだ時は上を基準に、下が切れるように */
   transition: transform 0.4s ease;
 }
 
-.item:hover .itemImgSrc {
+/* リンクのテキストにホバーした時だけ画像を少し拡大 */
+.itemBody:has(.link:hover) .itemImgSrc {
   transform: scale(1.04);
 }
 
@@ -218,17 +226,23 @@
     --num-size: clamp(30px, 3.6vw, 40px);
     --text-gap: clamp(20px, 3vw, 30px);
     --img-gap: clamp(20px, 3.4vw, 36px);
+    --content-w: none;
     top: var(--header-h);
     height: auto;
     min-height: calc(100svh - var(--header-h));
     overflow: visible;
-    /* ヘッダー分は top で下げているので上下パディングは対称に */
     padding: var(--card-pad);
+  }
+
+  .itemBody {
+    max-width: none;
   }
 
   .itemImg {
     flex: none;
-    aspect-ratio: 320 / 213;   /* W800 → 320×213（横長のまま・下に伸ばさない） */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 320 / 213;
   }
 }
 
@@ -242,6 +256,7 @@
     --body-size: 14px;
     --text-gap: 24px;
     --img-gap: 28px;
+    --dwell: 120px;
     padding: 0 0 var(--space-5);
   }
 
@@ -268,13 +283,15 @@
   }
 
   .itemBody {
+    max-width: none;
     flex: 0 1 auto;
   }
 
   .itemImg {
     flex: none;
+    width: 100%;
     aspect-ratio: auto;
-    height: 213px;   /* 下に伸ばさず固定高さ */
+    height: 213px;
     min-height: 0;
   }
 

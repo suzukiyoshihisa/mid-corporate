@@ -48,7 +48,7 @@ const items = [
   },
   {
     number: '05',
-    brand: 'FOOD & BAR',
+    brand: 'WANSIE FLAGSHIP STORE',
     title: '飲食・バー事業',
     src: '/service-bar.webp',
     alt: 'WANSIE旗艦店に併設されたバー',
