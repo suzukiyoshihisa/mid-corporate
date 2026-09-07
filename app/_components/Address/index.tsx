@@ -58,7 +58,7 @@ export default function Address() {
               <dt className={styles.infoTerm}>所在地</dt>
               <dd className={styles.infoDef}>
                 【本社】{COMPANY_INFO.address.postal} {COMPANY_INFO.address.city} {COMPANY_INFO.address.building}<br />
-                【福岡支社】〒810-0042 福岡県福岡市中央区赤坂1丁目8-23
+                【福岡支社】〒812-0011 福岡県福岡市博多区博多駅前 1-23-2 Park Front 博多駅前1丁目5F-B GMOオフィスサポート福岡博多オフィス
               </dd>
             </div>
             <div className={styles.infoRow}>
